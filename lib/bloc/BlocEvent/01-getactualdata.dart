@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
+import 'package:intl/intl.dart';
 
 import '../../data/global.dart';
 import '../../data/model.dart';
@@ -28,7 +29,6 @@ class ACTUALDATA_Bloc extends Bloc<ACTUALDATA_Event, List<YMDDATAmodel>> {
 
     List<YMDDATAmodel> output = [];
     if (response.statusCode == 200) {
-      // var databuff = jsonDecode(response.body);
       var databuff = response.data;
       // var databuff = testdata;
       //   // print(databuff);
@@ -39,7 +39,7 @@ class ACTUALDATA_Bloc extends Bloc<ACTUALDATA_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
-          LoadingTime01: _NullCheck(databuff[i]['LoadingTime']),
+          LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: _NullCheck(databuff[i]['State02tempPV']),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
           Degressing03Temp: _NullCheck(databuff[i]['State03tempPV']),
@@ -177,4 +177,32 @@ String _NullCheck(dynamic input) {
     }
   }
   return output;
+}
+
+String _daycon(String input) {
+  String output = '-';
+  if (isNumeric(input)) {
+    int datain = int.parse(input);
+    var date = DateTime.fromMillisecondsSinceEpoch(datain);
+    // print(date);
+    // print(DateFormat('dd/MM/yyyy hh:mm a').format(date));
+    output = DateFormat('dd/MM/yyyy hh:mm a').format(date);
+  }
+
+  return output;
+}
+
+String ConverstStr(String input) {
+  if (isNumeric(input)) {
+    return input;
+  } else {
+    return '0';
+  }
+}
+
+bool isNumeric(String s) {
+  if (s == null) {
+    return false;
+  }
+  return double.tryParse(s) != null;
 }

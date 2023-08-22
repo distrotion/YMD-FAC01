@@ -6,6 +6,7 @@ import 'package:csv/csv.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 import '../../data/datadummy.dart';
 import '../../data/global.dart';
@@ -52,8 +53,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
     List<YMDDATAmodel> output = [];
 
     if (response.statusCode == 200) {
-      var databuff = jsonDecode(response.data);
-      // var databuff = response.data;
+      var databuff = response.data;
       // var databuff = testdata;
 
       for (var i = 0; i < databuff.length; i++) {
@@ -63,7 +63,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
-          LoadingTime01: _NullCheck(databuff[i]['LoadingTime']),
+          LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: _NullCheck(databuff[i]['State02tempPV']),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
           Degressing03Temp: _NullCheck(databuff[i]['State03tempPV']),
@@ -212,7 +212,6 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
     List<YMDDATAmodel> output = [];
 
     if (response.statusCode == 200) {
-      // var databuff = jsonDecode(response.data);
       var databuff = response.data;
       // var databuff = testdata;
 
@@ -223,7 +222,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
-          LoadingTime01: _NullCheck(databuff[i]['LoadingTime']),
+          LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: _NullCheck(databuff[i]['State02tempPV']),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
           Degressing03Temp: _NullCheck(databuff[i]['State03tempPV']),
@@ -505,7 +504,7 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Item);
       row.add(data[i].PartNO);
       row.add(data[i].PartName);
-      row.add(data[i].LoadingTime01);
+      row.add(_daycon(data[i].LoadingTime01));
       row.add(data[i].Degressing02Temp);
       row.add(data[i].Degressing02Time);
       row.add(data[i].Degressing03Temp);
@@ -642,4 +641,32 @@ ExpCSV(List<YMDDATAmodel> data) {
   AnchorElement(href: "data:text/plain;charset=utf-8,$csv")
     ..setAttribute("download", "DATA ${INDreportVAR.selectedDate}.csv")
     ..click();
+}
+
+String _daycon(String input) {
+  String output = '-';
+  if (isNumeric(input)) {
+    int datain = int.parse(input);
+    var date = DateTime.fromMillisecondsSinceEpoch(datain);
+    // print(date);
+    // print(DateFormat('dd/MM/yyyy hh:mm a').format(date));
+    output = DateFormat('dd/MM/yyyy hh:mm a').format(date);
+  }
+
+  return output;
+}
+
+String ConverstStr(String input) {
+  if (isNumeric(input)) {
+    return input;
+  } else {
+    return '0';
+  }
+}
+
+bool isNumeric(String s) {
+  if (s == null) {
+    return false;
+  }
+  return double.tryParse(s) != null;
 }
