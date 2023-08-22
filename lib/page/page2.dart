@@ -19,23 +19,7 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // DHtimer.cancel();
-    return Page2BlocBody();
-  }
-}
-
-class Page2BlocBody extends StatelessWidget {
-  /// {@macro counter_page}
-  const Page2BlocBody({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-        create: (_) => ACTUALDATA_Bloc(),
-        child: BlocBuilder<ACTUALDATA_Bloc, actDATAmodel>(
-          builder: (context, data) {
-            return Page2BodyCSVbloc();
-          },
-        ));
+    return Page2BodyCSVbloc();
   }
 }
 
@@ -46,7 +30,7 @@ class Page2BodyCSVbloc extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
         create: (_) => CsvExport_Bloc(),
-        child: BlocBuilder<CsvExport_Bloc, List<dataset>>(
+        child: BlocBuilder<CsvExport_Bloc, List<YMDDATAmodel>>(
           builder: (context, datatable) {
             return Page2Body(
               datatable: datatable,
@@ -60,7 +44,7 @@ class Page2BodyCSVbloc extends StatelessWidget {
 
 class Page2Body extends StatelessWidget {
   Page2Body({Key? key, this.datatable}) : super(key: key);
-  List<dataset>? datatable;
+  List<YMDDATAmodel>? datatable;
   @override
   Widget build(BuildContext context) {
     return CsvPicker(

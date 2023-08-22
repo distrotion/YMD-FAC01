@@ -314,3 +314,279 @@ class actDATAmodel {
   String CYCLETIME;
   String BARCODE;
 }
+
+class YMDDATAmodel {
+  YMDDATAmodel({
+    this.NO = '',
+    this.Item = '',
+    this.PartNO = '',
+    this.PartName = '',
+    this.LoadingTime01 = '',
+    this.Degressing02Temp = '',
+    this.Degressing02Time = '',
+    this.Degressing03Temp = '',
+    this.Degressing03Time = '',
+    this.Shower04Temp = '',
+    this.Shower04Time = '',
+    this.Degressing05Temp = '',
+    this.Degressing05Time = '',
+    this.Degressing06Temp = '',
+    this.Degressing06Time = '',
+    this.Degressing07Temp = '',
+    this.Degressing07Time = '',
+    this.WaterRinse08Temp = '',
+    this.WaterRinse08Time = '',
+    this.WaterRinse09Temp = '',
+    this.WaterRinse09Time = '',
+    this.AcidWashing10Temp = '',
+    this.AcidWashing10Time = '',
+    this.WaterRinse11Temp = '',
+    this.WaterRinse11Time = '',
+    this.WaterRinse12Temp = '',
+    this.WaterRinse12Time = '',
+    this.ElectrolyticAnodic13Volt = '',
+    this.ElectrolyticAnodic13Amp = '',
+    this.ElectrolyticAnodic13Temp = '',
+    this.ElectrolyticAnodic13Rpm = '',
+    this.ElectrolyticAnodic13Time = '',
+    this.ElectrolyticCathod14Volt = '',
+    this.ElectrolyticCathod14Amp = '',
+    this.ElectrolyticCathod14Temp = '',
+    this.ElectrolyticCathod14Rpm = '',
+    this.ElectrolyticCathod14Time = '',
+    this.WaterRinse15Temp = '',
+    this.WaterRinse15Time = '',
+    this.WaterRinse16Temp = '',
+    this.WaterRinse16Time = '',
+    this.Activetion17Temp = '',
+    this.Activetion17Time = '',
+    this.WaterRinse18Temp = '',
+    this.WaterRinse18Time = '',
+    this.CuCyanide19Volt = '',
+    this.CuCyanide19Amp = '',
+    this.CuCyanide19Temp = '',
+    this.CuCyanide19Rpm = '',
+    this.CuCyanide19Time = '',
+    this.CuCyanide20Volt = '',
+    this.CuCyanide20Amp = '',
+    this.CuCyanide20Temp = '',
+    this.CuCyanide20Rpm = '',
+    this.CuCyanide20Time = '',
+    this.WaterRinse21Temp = '',
+    this.WaterRinse21Time = '',
+    this.WaterRinse22Temp = '',
+    this.WaterRinse22Time = '',
+    this.ActivetionH2S042223Temp = '',
+    this.ActivetionH2S04223Time = '',
+    this.CoperSulfate24Volt = '',
+    this.CoperSulfate24Amp = '',
+    this.CoperSulfate24Temp = '',
+    this.CoperSulfate24Rpm = '',
+    this.CoperSulfate024Time = '',
+    this.WaterRinse25Temp = '',
+    this.WaterRinse25Time = '',
+    this.SemiBrightNickel26Volt = '',
+    this.SemiBrightNickel26Amp = '',
+    this.SemiBrightNickel26Temp = '',
+    this.SemiBrightNickel26Rpm = '',
+    this.SemiBrightNickel26Time = '',
+    this.SemiBrightNickel27Volt = '',
+    this.SemiBrightNickel27Amp = '',
+    this.SemiBrightNickel27Temp = '',
+    this.SemiBrightNickel27Rpm = '',
+    this.SemiBrightNickel27Time = '',
+    this.SemiBrightNickel28Volt = '',
+    this.SemiBrightNickel28Amp = '',
+    this.SemiBrightNickel28Temp = '',
+    this.SemiBrightNickel28Rpm = '',
+    this.SemiBrightNickel28Time = '',
+    this.WaterRinse29Temp = '',
+    this.WaterRinse29Time = '',
+    this.DullSnPlating30Volt = '',
+    this.DullSnPlating30Amp = '',
+    this.DullSnPlating30Temp = '',
+    this.DullSnPlating30Rpm = '',
+    this.DullSnPlating30Time = '',
+    this.DullSnPlating31Volt = '',
+    this.DullSnPlating31Amp = '',
+    this.DullSnPlating31Temp = '',
+    this.DullSnPlating31Rpm = '',
+    this.DullSnPlating31Time = '',
+    this.DullSnPlating32Volt = '',
+    this.DullSnPlating32Amp = '',
+    this.DullSnPlating32Temp = '',
+    this.DullSnPlating32Rpm = '',
+    this.DullSnPlating32Time = '',
+    this.DullSnPlating33Volt = '',
+    this.DullSnPlating33Amp = '',
+    this.DullSnPlating33Temp = '',
+    this.DullSnPlating33Rpm = '',
+    this.DullSnPlating33Time = '',
+    this.WaterRinse34Temp = '',
+    this.WaterRinse34Time = '',
+    this.BrightSnPlating35Volt = '',
+    this.BrightSnPlating35Amp = '',
+    this.BrightSnPlating35Temp = '',
+    this.BrightSnPlating35Rpm = '',
+    this.BrightSnPlating35Time = '',
+    this.BrightSnPlating36Volt = '',
+    this.BrightSnPlating36Amp = '',
+    this.BrightSnPlating36Temp = '',
+    this.BrightSnPlating36Rpm = '',
+    this.BrightSnPlating36Time = '',
+    this.WaterRinse37Temp = '',
+    this.WaterRinse37Time = '',
+    this.Postrement38Temp = '',
+    this.Postrement38Time = '',
+    this.Postrement39Temp = '',
+    this.Postrement39Time = '',
+    this.HotWaterRinse40Temp = '',
+    this.HotWaterRinse40Time = '',
+    this.HotWaterRinse41Temp = '',
+    this.HotWaterRinse41Time = '',
+  });
+  String NO;
+  String Item;
+  String PartNO;
+  String PartName;
+  String LoadingTime01;
+  String Degressing02Temp;
+  String Degressing02Time;
+  String Degressing03Temp;
+  String Degressing03Time;
+  String Shower04Temp;
+  String Shower04Time;
+  String Degressing05Temp;
+  String Degressing05Time;
+  String Degressing06Temp;
+  String Degressing06Time;
+  String Degressing07Temp;
+  String Degressing07Time;
+  String WaterRinse08Temp;
+  String WaterRinse08Time;
+  String WaterRinse09Temp;
+  String WaterRinse09Time;
+  String AcidWashing10Temp;
+  String AcidWashing10Time;
+  String WaterRinse11Temp;
+  String WaterRinse11Time;
+  String WaterRinse12Temp;
+  String WaterRinse12Time;
+  String ElectrolyticAnodic13Volt;
+  String ElectrolyticAnodic13Amp;
+  String ElectrolyticAnodic13Temp;
+  String ElectrolyticAnodic13Rpm;
+  String ElectrolyticAnodic13Time;
+  String ElectrolyticCathod14Volt;
+  String ElectrolyticCathod14Amp;
+  String ElectrolyticCathod14Temp;
+  String ElectrolyticCathod14Rpm;
+  String ElectrolyticCathod14Time;
+  String WaterRinse15Temp;
+  String WaterRinse15Time;
+  String WaterRinse16Temp;
+  String WaterRinse16Time;
+  String Activetion17Temp;
+  String Activetion17Time;
+  String WaterRinse18Temp;
+  String WaterRinse18Time;
+  String CuCyanide19Volt;
+  String CuCyanide19Amp;
+  String CuCyanide19Temp;
+  String CuCyanide19Rpm;
+  String CuCyanide19Time;
+  String CuCyanide20Volt;
+  String CuCyanide20Amp;
+  String CuCyanide20Temp;
+  String CuCyanide20Rpm;
+  String CuCyanide20Time;
+  String WaterRinse21Temp;
+  String WaterRinse21Time;
+  String WaterRinse22Temp;
+  String WaterRinse22Time;
+  String ActivetionH2S042223Temp;
+  String ActivetionH2S04223Time;
+  String CoperSulfate24Volt;
+  String CoperSulfate24Amp;
+  String CoperSulfate24Temp;
+  String CoperSulfate24Rpm;
+  String CoperSulfate024Time;
+
+  String WaterRinse25Temp;
+  String WaterRinse25Time;
+
+  String SemiBrightNickel26Volt;
+  String SemiBrightNickel26Amp;
+  String SemiBrightNickel26Temp;
+  String SemiBrightNickel26Rpm;
+  String SemiBrightNickel26Time;
+
+  String SemiBrightNickel27Volt;
+  String SemiBrightNickel27Amp;
+  String SemiBrightNickel27Temp;
+  String SemiBrightNickel27Rpm;
+  String SemiBrightNickel27Time;
+
+  String SemiBrightNickel28Volt;
+  String SemiBrightNickel28Amp;
+  String SemiBrightNickel28Temp;
+  String SemiBrightNickel28Rpm;
+  String SemiBrightNickel28Time;
+
+  String WaterRinse29Temp;
+  String WaterRinse29Time;
+
+  String DullSnPlating30Volt;
+  String DullSnPlating30Amp;
+  String DullSnPlating30Temp;
+  String DullSnPlating30Rpm;
+  String DullSnPlating30Time;
+
+  String DullSnPlating31Volt;
+  String DullSnPlating31Amp;
+  String DullSnPlating31Temp;
+  String DullSnPlating31Rpm;
+  String DullSnPlating31Time;
+
+  String DullSnPlating32Volt;
+  String DullSnPlating32Amp;
+  String DullSnPlating32Temp;
+  String DullSnPlating32Rpm;
+  String DullSnPlating32Time;
+
+  String DullSnPlating33Volt;
+  String DullSnPlating33Amp;
+  String DullSnPlating33Temp;
+  String DullSnPlating33Rpm;
+  String DullSnPlating33Time;
+
+  String WaterRinse34Temp;
+  String WaterRinse34Time;
+
+  String BrightSnPlating35Volt;
+  String BrightSnPlating35Amp;
+  String BrightSnPlating35Temp;
+  String BrightSnPlating35Rpm;
+  String BrightSnPlating35Time;
+
+  String BrightSnPlating36Volt;
+  String BrightSnPlating36Amp;
+  String BrightSnPlating36Temp;
+  String BrightSnPlating36Rpm;
+  String BrightSnPlating36Time;
+
+  String WaterRinse37Temp;
+  String WaterRinse37Time;
+
+  String Postrement38Temp;
+  String Postrement38Time;
+
+  String Postrement39Temp;
+  String Postrement39Time;
+
+  String HotWaterRinse40Temp;
+  String HotWaterRinse40Time;
+
+  String HotWaterRinse41Temp;
+  String HotWaterRinse41Time;
+}

@@ -82,11 +82,11 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
                     ),
                   ))),
           menu_normal(
-            name: "IND DASHBOARD",
+            name: "DASHBOARD",
             page: Page1(),
           ),
           menu_normal(
-            name: "IND Report",
+            name: "Report",
             page: Page2(),
           ),
           // menu_normal(

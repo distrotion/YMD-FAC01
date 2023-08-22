@@ -17,36 +17,37 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page1BlocBody();
+    return Page1BodyCSVbloc();
   }
 }
 
-class Page1BlocBody extends StatelessWidget {
-  /// {@macro counter_page}
-  const Page1BlocBody({Key? key}) : super(key: key);
+class Page1BodyCSVbloc extends StatelessWidget {
+  const Page1BodyCSVbloc({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
         create: (_) => ACTUALDATA_Bloc(),
-        child: BlocBuilder<ACTUALDATA_Bloc, actDATAmodel>(
-          builder: (context, data) {
+        child: BlocBuilder<ACTUALDATA_Bloc, List<YMDDATAmodel>>(
+          builder: (context, datatable) {
             return Page1Body(
-              data: data,
+              datatable: datatable,
             );
           },
         ));
+
+    ;
   }
 }
 
 class Page1Body extends StatelessWidget {
-  Page1Body({Key? key, this.data}) : super(key: key);
-  actDATAmodel? data;
+  Page1Body({Key? key, this.datatable}) : super(key: key);
+  List<YMDDATAmodel>? datatable;
   @override
   Widget build(BuildContext context) {
     return Center(
         child: DashBoard(
-      data: data,
+      datatable: datatable,
     ));
   }
 }

@@ -88,9 +88,7 @@ class actDATA {
 late Timer DHtimer;
 late Timer JGC_DASHBOARDtimer;
 
-String GserverIND = 'http://172.23.10.40:2500/';
-String GserverNEW = 'http://172.23.10.40:14500/';
-// String GserverNEW = 'http://127.0.0.1:14500/';
-String GserverJGC = 'http://172.23.10.60:1880/';
+String GserverYMD = 'http://192.168.71.102:1885/';
+
 //
 // String GserverNEWTEST = 'http://127.0.0.1:14500/';
