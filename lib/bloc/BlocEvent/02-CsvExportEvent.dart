@@ -51,7 +51,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
     // });
 
     List<YMDDATAmodel> output = [];
-
+    // if (true) {
     if (response.statusCode == 200) {
       var databuff = response.data;
       // var databuff = testdata;
@@ -212,6 +212,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
     List<YMDDATAmodel> output = [];
 
     if (response.statusCode == 200) {
+      // if (true) {
       var databuff = response.data;
       // var databuff = testdata;
 
@@ -504,7 +505,7 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Item);
       row.add(data[i].PartNO);
       row.add(data[i].PartName);
-      row.add(_daycon(data[i].LoadingTime01));
+      row.add((data[i].LoadingTime01));
       row.add(data[i].Degressing02Temp);
       row.add(data[i].Degressing02Time);
       row.add(data[i].Degressing03Temp);
