@@ -70,28 +70,26 @@ class _DashBoardBodyState extends State<DashBoardBody> {
       height: 700,
       // width: 800,
 
-      child: SingleChildScrollView(
-        child: Scrollbar(
+      child: Scrollbar(
+        controller: controllerReportH,
+        thumbVisibility: true,
+        interactive: true,
+        thickness: 10,
+        radius: const Radius.circular(20),
+        child: SingleChildScrollView(
           controller: controllerReportH,
-          thumbVisibility: true,
-          interactive: true,
-          thickness: 10,
-          radius: const Radius.circular(20),
+          scrollDirection: Axis.horizontal,
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(
-                height: 40,
-              ),
-              SingleChildScrollView(
-                controller: controllerReportH,
-                scrollDirection: Axis.horizontal,
-                child: Column(
-                  children: [
-                    MasterTable(),
+              MasterTable(),
+              Expanded(
+                child: SingleChildScrollView(
+                  controller: controllerReportV,
+                  // scrollDirection: Axis.horizontal,
+                  child: Column(children: [
                     for (int i = 0; i < _datatable.length; i++) ...[
-                      //
                       MasterTableDATA(
+                        nint: i,
                         NO: _datatable[i].NO,
                         Item: _datatable[i].Item,
                         PartNO: _datatable[i].PartNO,
@@ -222,7 +220,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                         DullSnPlating33Temp: _datatable[i].DullSnPlating33Temp,
                         DullSnPlating33Rpm: _datatable[i].DullSnPlating33Rpm,
                         DullSnPlating33Time: _datatable[i].DullSnPlating33Time,
-                        WaterRinse34Temp: _datatable[i].WaterRinse34Temp,
+                        WaterRinse34Tempp: _datatable[i].WaterRinse34Temp,
                         WaterRinse34Time: _datatable[i].WaterRinse34Time,
                         BrightSnPlating35Volt:
                             _datatable[i].BrightSnPlating35Volt,
@@ -255,14 +253,30 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                         HotWaterRinse41Temp: _datatable[i].HotWaterRinse41Temp,
                         HotWaterRinse41Time: _datatable[i].HotWaterRinse41Time,
                       ),
-                    ]
-                  ],
+                    ],
+                  ]),
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class HEADER extends StatelessWidget {
+  const HEADER({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scrollbar(
+      controller: controllerReportH,
+      thumbVisibility: true,
+      interactive: true,
+      thickness: 10,
+      radius: const Radius.circular(20),
+      child: MasterTable(),
     );
   }
 }

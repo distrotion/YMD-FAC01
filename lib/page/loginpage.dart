@@ -42,63 +42,63 @@ class LoginPageWidget extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
-                    height: 40,
-                    child: TextFormField(
-                      onChanged: (value) {},
-                      initialValue: "",
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(8),
-                        hintText: 'TPK ID',
-                        hintStyle: TextStyle(
-                          fontFamily: 'Mitr',
-                          color: Color(0xffb2b2b2),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w300,
-                          fontStyle: FontStyle.normal,
-                          letterSpacing: 0,
-                        ),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red, width: 1),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        // suffixIcon: Icon(
-                        //   Icons.search,
-                        // ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  SizedBox(
-                    height: 40,
-                    child: TextFormField(
-                      onChanged: (value) {},
-                      obscureText: true,
-                      initialValue: "",
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(8),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(
-                          fontFamily: 'Mitr',
-                          color: Color(0xffb2b2b2),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w300,
-                          fontStyle: FontStyle.normal,
-                          letterSpacing: 0,
-                        ),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red, width: 1),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
+                  // SizedBox(
+                  //   height: 40,
+                  //   child: TextFormField(
+                  //     onChanged: (value) {},
+                  //     initialValue: "",
+                  //     decoration: InputDecoration(
+                  //       contentPadding: EdgeInsets.all(8),
+                  //       hintText: 'TPK ID',
+                  //       hintStyle: TextStyle(
+                  //         fontFamily: 'Mitr',
+                  //         color: Color(0xffb2b2b2),
+                  //         fontSize: 14,
+                  //         fontWeight: FontWeight.w300,
+                  //         fontStyle: FontStyle.normal,
+                  //         letterSpacing: 0,
+                  //       ),
+                  //       border: OutlineInputBorder(
+                  //         borderSide: BorderSide(color: Colors.red, width: 1),
+                  //         borderRadius: BorderRadius.circular(8),
+                  //       ),
+                  //       // suffixIcon: Icon(
+                  //       //   Icons.search,
+                  //       // ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  // SizedBox(
+                  //   height: 40,
+                  //   child: TextFormField(
+                  //     onChanged: (value) {},
+                  //     obscureText: true,
+                  //     initialValue: "",
+                  //     decoration: InputDecoration(
+                  //       contentPadding: EdgeInsets.all(8),
+                  //       hintText: 'Password',
+                  //       hintStyle: TextStyle(
+                  //         fontFamily: 'Mitr',
+                  //         color: Color(0xffb2b2b2),
+                  //         fontSize: 14,
+                  //         fontWeight: FontWeight.w300,
+                  //         fontStyle: FontStyle.normal,
+                  //         letterSpacing: 0,
+                  //       ),
+                  //       border: OutlineInputBorder(
+                  //         borderSide: BorderSide(color: Colors.red, width: 1),
+                  //         borderRadius: BorderRadius.circular(8),
+                  //       ),
 
-                        // suffixIcon: Icon(
-                        //   Icons.search,
-                        // ),
-                      ),
-                    ),
-                  ),
+                  //       // suffixIcon: Icon(
+                  //       //   Icons.search,
+                  //       // ),
+                  //     ),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 20,
                   ),

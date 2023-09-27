@@ -64,127 +64,143 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
-          Degressing02Temp: _NullCheck(databuff[i]['State02tempPV']),
+          Degressing02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
-          Degressing03Temp: _NullCheck(databuff[i]['State03tempPV']),
+          Degressing03Temp: todesimol(_NullCheck(databuff[i]['State03tempPV'])),
           Degressing03Time: _NullCheck(databuff[i]['State03timePV']),
-          Shower04Temp: _NullCheck(databuff[i]['State04tempPV']),
+          Shower04Temp: todesimol(_NullCheck(databuff[i]['State04tempPV'])),
           Shower04Time: _NullCheck(databuff[i]['State04timePV']),
-          Degressing05Temp: _NullCheck(databuff[i]['State05tempPV']),
+          Degressing05Temp: todesimol(_NullCheck(databuff[i]['State05tempPV'])),
           Degressing05Time: _NullCheck(databuff[i]['State05timePV']),
-          Degressing06Temp: _NullCheck(databuff[i]['State06tempPV']),
+          Degressing06Temp: todesimol(_NullCheck(databuff[i]['State06tempPV'])),
           Degressing06Time: _NullCheck(databuff[i]['State06timePV']),
-          Degressing07Temp: _NullCheck(databuff[i]['State07tempPV']),
+          Degressing07Temp: todesimol(_NullCheck(databuff[i]['State07tempPV'])),
           Degressing07Time: _NullCheck(databuff[i]['State07timePV']),
-          WaterRinse08Temp: _NullCheck(databuff[i]['State08tempPV']),
+          WaterRinse08Temp: todesimol(_NullCheck(databuff[i]['State08tempPV'])),
           WaterRinse08Time: _NullCheck(databuff[i]['State08timePV']),
-          WaterRinse09Temp: _NullCheck(databuff[i]['State09tempPV']),
+          WaterRinse09Temp: todesimol(_NullCheck(databuff[i]['State09tempPV'])),
           WaterRinse09Time: _NullCheck(databuff[i]['State09timePV']),
-          AcidWashing10Temp: _NullCheck(databuff[i]['State10tempPV']),
+          AcidWashing10Temp:
+              todesimol(_NullCheck(databuff[i]['State10tempPV'])),
           AcidWashing10Time: _NullCheck(databuff[i]['State10timePV']),
-          WaterRinse11Temp: _NullCheck(databuff[i]['State11tempPV']),
+          WaterRinse11Temp: todesimol(_NullCheck(databuff[i]['State11tempPV'])),
           WaterRinse11Time: _NullCheck(databuff[i]['State11timePV']),
-          WaterRinse12Temp: _NullCheck(databuff[i]['State12tempPV']),
+          WaterRinse12Temp: todesimol(_NullCheck(databuff[i]['State12tempPV'])),
           WaterRinse12Time: _NullCheck(databuff[i]['State12timePV']),
-          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticAnodic13Temp: _NullCheck(databuff[i]['State13tempPV']),
-          ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['PartName']),
+          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['State13voltPV']),
+          ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['State13amPV']),
+          ElectrolyticAnodic13Temp:
+              todesimol(_NullCheck(databuff[i]['State13tempPV'])),
+          ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['State13rpmPV']),
           ElectrolyticAnodic13Time: _NullCheck(databuff[i]['State13timePV']),
-          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticCathod14Amp: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticCathod14Temp: _NullCheck(databuff[i]['State14tempPV']),
-          ElectrolyticCathod14Rpm: _NullCheck(databuff[i]['PartName']),
+          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['State14voltPV']),
+          ElectrolyticCathod14Amp: _NullCheck(databuff[i]['State14amPV']),
+          ElectrolyticCathod14Temp:
+              todesimol(_NullCheck(databuff[i]['State14tempPV'])),
+          ElectrolyticCathod14Rpm: _NullCheck(databuff[i]['State14rpmPV']),
           ElectrolyticCathod14Time: _NullCheck(databuff[i]['State14timePV']),
-          WaterRinse15Temp: _NullCheck(databuff[i]['State15tempPV']),
+          WaterRinse15Temp: todesimol(_NullCheck(databuff[i]['State15tempPV'])),
           WaterRinse15Time: _NullCheck(databuff[i]['State15timePV']),
-          WaterRinse16Temp: _NullCheck(databuff[i]['State16tempPV']),
+          WaterRinse16Temp: todesimol(_NullCheck(databuff[i]['State16tempPV'])),
           WaterRinse16Time: _NullCheck(databuff[i]['State16timePV']),
-          Activetion17Temp: _NullCheck(databuff[i]['State17tempPV']),
+          Activetion17Temp: todesimol(_NullCheck(databuff[i]['State17tempPV'])),
           Activetion17Time: _NullCheck(databuff[i]['State17timePV']),
-          WaterRinse18Temp: _NullCheck(databuff[i]['State18tempPV']),
-          WaterRinse18Time: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Volt: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Amp: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Temp: _NullCheck(databuff[i]['State19tempPV']),
-          CuCyanide19Rpm: _NullCheck(databuff[i]['PartName']),
+          WaterRinse18Temp: todesimol(_NullCheck(databuff[i]['State18tempPV'])),
+          WaterRinse18Time: _NullCheck(databuff[i]['State18timePV']),
+          CuCyanide19Volt: _NullCheck(databuff[i]['State19voltPV']),
+          CuCyanide19Amp: _NullCheck(databuff[i]['State19amPV']),
+          CuCyanide19Temp: todesimol(_NullCheck(databuff[i]['State19tempPV'])),
+          CuCyanide19Rpm: _NullCheck(databuff[i]['State19rpmPV']),
           CuCyanide19Time: _NullCheck(databuff[i]['State19timePV']),
-          CuCyanide20Volt: _NullCheck(databuff[i]['PartName']),
-          CuCyanide20Amp: _NullCheck(databuff[i]['PartName']),
-          CuCyanide20Temp: _NullCheck(databuff[i]['State20tempPV']),
-          CuCyanide20Rpm: _NullCheck(databuff[i]['PartName']),
+          CuCyanide20Volt: _NullCheck(databuff[i]['State20voltPV']),
+          CuCyanide20Amp: _NullCheck(databuff[i]['State20amPV']),
+          CuCyanide20Temp: todesimol(_NullCheck(databuff[i]['State20tempPV'])),
+          CuCyanide20Rpm: _NullCheck(databuff[i]['State20rpmPV']),
           CuCyanide20Time: _NullCheck(databuff[i]['State20timePV']),
-          WaterRinse21Temp: _NullCheck(databuff[i]['State21tempPV']),
-          WaterRinse21Time: _NullCheck(databuff[i]['PartName']),
-          WaterRinse22Temp: _NullCheck(databuff[i]['State22tempPV']),
+          WaterRinse21Temp: todesimol(_NullCheck(databuff[i]['State21tempPV'])),
+          WaterRinse21Time: _NullCheck(databuff[i]['State21timePV']),
+          WaterRinse22Temp: todesimol(_NullCheck(databuff[i]['State22tempPV'])),
           WaterRinse22Time: _NullCheck(databuff[i]['State22timePV']),
-          ActivetionH2S042223Temp: _NullCheck(databuff[i]['State23tempPV']),
-          ActivetionH2S04223Time: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Volt: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Amp: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Temp: _NullCheck(databuff[i]['State24tempPV']),
-          CoperSulfate24Rpm: _NullCheck(databuff[i]['PartName']),
+          ActivetionH2S042223Temp:
+              todesimol(_NullCheck(databuff[i]['State23tempPV'])),
+          ActivetionH2S04223Time: _NullCheck(databuff[i]['State23timePV']),
+          CoperSulfate24Volt: _NullCheck(databuff[i]['State24voltPV']),
+          CoperSulfate24Amp: _NullCheck(databuff[i]['State24amPV']),
+          CoperSulfate24Temp:
+              todesimol(_NullCheck(databuff[i]['State24tempPV'])),
+          CoperSulfate24Rpm: _NullCheck(databuff[i]['State24rpmPV']),
           CoperSulfate024Time: _NullCheck(databuff[i]['State24timePV']),
-          WaterRinse25Temp: _NullCheck(databuff[i]['State25tempPV']),
+          WaterRinse25Temp: todesimol(_NullCheck(databuff[i]['State25tempPV'])),
           WaterRinse25Time: _NullCheck(databuff[i]['State25timePV']),
-          SemiBrightNickel26Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel26Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel26Temp: _NullCheck(databuff[i]['State26tempPV']),
-          SemiBrightNickel26Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel26Volt: _NullCheck(databuff[i]['State26voltPV']),
+          SemiBrightNickel26Amp: _NullCheck(databuff[i]['State26amPV']),
+          SemiBrightNickel26Temp:
+              todesimol(_NullCheck(databuff[i]['State26tempPV'])),
+          SemiBrightNickel26Rpm: _NullCheck(databuff[i]['State26rpmPV']),
           SemiBrightNickel26Time: _NullCheck(databuff[i]['State26timePV']),
-          SemiBrightNickel27Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel27Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel27Temp: _NullCheck(databuff[i]['State27tempPV']),
-          SemiBrightNickel27Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel27Volt: _NullCheck(databuff[i]['State27voltPV']),
+          SemiBrightNickel27Amp: _NullCheck(databuff[i]['State27amPV']),
+          SemiBrightNickel27Temp:
+              todesimol(_NullCheck(databuff[i]['State27tempPV'])),
+          SemiBrightNickel27Rpm: _NullCheck(databuff[i]['State27rpmPV']),
           SemiBrightNickel27Time: _NullCheck(databuff[i]['State27timePV']),
-          SemiBrightNickel28Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel28Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel28Temp: _NullCheck(databuff[i]['State28tempPV']),
-          SemiBrightNickel28Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel28Volt: _NullCheck(databuff[i]['State28voltPV']),
+          SemiBrightNickel28Amp: _NullCheck(databuff[i]['State28amPV']),
+          SemiBrightNickel28Temp:
+              todesimol(_NullCheck(databuff[i]['State28tempPV'])),
+          SemiBrightNickel28Rpm: _NullCheck(databuff[i]['State28rpmPV']),
           SemiBrightNickel28Time: _NullCheck(databuff[i]['State28timePV']),
-          WaterRinse29Temp: _NullCheck(databuff[i]['State29tempPV']),
+          WaterRinse29Temp: todesimol(_NullCheck(databuff[i]['State29tempPV'])),
           WaterRinse29Time: _NullCheck(databuff[i]['State29timePV']),
-          DullSnPlating30Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating30Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating30Temp: _NullCheck(databuff[i]['State30tempPV']),
-          DullSnPlating30Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating30Volt: _NullCheck(databuff[i]['State30voltPV']),
+          DullSnPlating30Amp: _NullCheck(databuff[i]['State30amPV']),
+          DullSnPlating30Temp:
+              todesimol(_NullCheck(databuff[i]['State30tempPV'])),
+          DullSnPlating30Rpm: _NullCheck(databuff[i]['State30rpmPV']),
           DullSnPlating30Time: _NullCheck(databuff[i]['State30timePV']),
-          DullSnPlating31Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating31Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating31Temp: _NullCheck(databuff[i]['State31tempPV']),
-          DullSnPlating31Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating31Volt: _NullCheck(databuff[i]['State31voltPV']),
+          DullSnPlating31Amp: _NullCheck(databuff[i]['State31amPV']),
+          DullSnPlating31Temp:
+              todesimol(_NullCheck(databuff[i]['State31tempPV'])),
+          DullSnPlating31Rpm: _NullCheck(databuff[i]['State31rpmPV']),
           DullSnPlating31Time: _NullCheck(databuff[i]['State31timePV']),
-          DullSnPlating32Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating32Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating32Temp: _NullCheck(databuff[i]['State32tempPV']),
-          DullSnPlating32Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating32Volt: _NullCheck(databuff[i]['State32voltPV']),
+          DullSnPlating32Amp: _NullCheck(databuff[i]['State32amPV']),
+          DullSnPlating32Temp:
+              todesimol(_NullCheck(databuff[i]['State32tempPV'])),
+          DullSnPlating32Rpm: _NullCheck(databuff[i]['State32rpmPV']),
           DullSnPlating32Time: _NullCheck(databuff[i]['State32timePV']),
-          DullSnPlating33Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating33Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating33Temp: _NullCheck(databuff[i]['State33tempPV']),
-          DullSnPlating33Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating33Volt: _NullCheck(databuff[i]['State33voltPV']),
+          DullSnPlating33Amp: _NullCheck(databuff[i]['State33amPV']),
+          DullSnPlating33Temp:
+              todesimol(_NullCheck(databuff[i]['State33tempPV'])),
+          DullSnPlating33Rpm: _NullCheck(databuff[i]['State33rpmPV']),
           DullSnPlating33Time: _NullCheck(databuff[i]['State33timePV']),
-          WaterRinse34Temp: _NullCheck(databuff[i]['State34tempPV']),
+          WaterRinse34Temp: todesimol(_NullCheck(databuff[i]['State34tempPV'])),
           WaterRinse34Time: _NullCheck(databuff[i]['State34timePV']),
-          BrightSnPlating35Volt: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating35Amp: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating35Temp: _NullCheck(databuff[i]['State35tempPV']),
-          BrightSnPlating35Rpm: _NullCheck(databuff[i]['PartName']),
+          BrightSnPlating35Volt: _NullCheck(databuff[i]['State35voltPV']),
+          BrightSnPlating35Amp: _NullCheck(databuff[i]['State35amPV']),
+          BrightSnPlating35Temp:
+              todesimol(_NullCheck(databuff[i]['State35tempPV'])),
+          BrightSnPlating35Rpm: _NullCheck(databuff[i]['State35rpmPV']),
           BrightSnPlating35Time: _NullCheck(databuff[i]['State35timePV']),
-          BrightSnPlating36Volt: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating36Amp: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating36Temp: _NullCheck(databuff[i]['State36tempPV']),
-          BrightSnPlating36Rpm: _NullCheck(databuff[i]['PartName']),
+          BrightSnPlating36Volt: _NullCheck(databuff[i]['State36voltPV']),
+          BrightSnPlating36Amp: _NullCheck(databuff[i]['State36amPV']),
+          BrightSnPlating36Temp:
+              todesimol(_NullCheck(databuff[i]['State36tempPV'])),
+          BrightSnPlating36Rpm: _NullCheck(databuff[i]['State36rpmPV']),
           BrightSnPlating36Time: _NullCheck(databuff[i]['State36timePV']),
-          WaterRinse37Temp: _NullCheck(databuff[i]['State37tempPV']),
+          WaterRinse37Temp: todesimol(_NullCheck(databuff[i]['State37tempPV'])),
           WaterRinse37Time: _NullCheck(databuff[i]['State37timePV']),
-          Postrement38Temp: _NullCheck(databuff[i]['State38tempPV']),
+          Postrement38Temp: todesimol(_NullCheck(databuff[i]['State38tempPV'])),
           Postrement38Time: _NullCheck(databuff[i]['State38timePV']),
-          Postrement39Temp: _NullCheck(databuff[i]['State39tempPV']),
+          Postrement39Temp: todesimol(_NullCheck(databuff[i]['State39tempPV'])),
           Postrement39Time: _NullCheck(databuff[i]['State39timePV']),
-          HotWaterRinse40Temp: _NullCheck(databuff[i]['State40tempPV']),
+          HotWaterRinse40Temp:
+              todesimol(_NullCheck(databuff[i]['State40tempPV'])),
           HotWaterRinse40Time: _NullCheck(databuff[i]['State40timePV']),
-          HotWaterRinse41Temp: _NullCheck(databuff[i]['State41tempPV']),
+          HotWaterRinse41Temp:
+              todesimol(_NullCheck(databuff[i]['State41tempPV'])),
           HotWaterRinse41Time: _NullCheck(databuff[i]['State41timePV']),
         ));
       }
@@ -224,127 +240,143 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
-          Degressing02Temp: _NullCheck(databuff[i]['State02tempPV']),
+          Degressing02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
-          Degressing03Temp: _NullCheck(databuff[i]['State03tempPV']),
+          Degressing03Temp: todesimol(_NullCheck(databuff[i]['State03tempPV'])),
           Degressing03Time: _NullCheck(databuff[i]['State03timePV']),
-          Shower04Temp: _NullCheck(databuff[i]['State04tempPV']),
+          Shower04Temp: todesimol(_NullCheck(databuff[i]['State04tempPV'])),
           Shower04Time: _NullCheck(databuff[i]['State04timePV']),
-          Degressing05Temp: _NullCheck(databuff[i]['State05tempPV']),
+          Degressing05Temp: todesimol(_NullCheck(databuff[i]['State05tempPV'])),
           Degressing05Time: _NullCheck(databuff[i]['State05timePV']),
-          Degressing06Temp: _NullCheck(databuff[i]['State06tempPV']),
+          Degressing06Temp: todesimol(_NullCheck(databuff[i]['State06tempPV'])),
           Degressing06Time: _NullCheck(databuff[i]['State06timePV']),
-          Degressing07Temp: _NullCheck(databuff[i]['State07tempPV']),
+          Degressing07Temp: todesimol(_NullCheck(databuff[i]['State07tempPV'])),
           Degressing07Time: _NullCheck(databuff[i]['State07timePV']),
-          WaterRinse08Temp: _NullCheck(databuff[i]['State08tempPV']),
+          WaterRinse08Temp: todesimol(_NullCheck(databuff[i]['State08tempPV'])),
           WaterRinse08Time: _NullCheck(databuff[i]['State08timePV']),
-          WaterRinse09Temp: _NullCheck(databuff[i]['State09tempPV']),
+          WaterRinse09Temp: todesimol(_NullCheck(databuff[i]['State09tempPV'])),
           WaterRinse09Time: _NullCheck(databuff[i]['State09timePV']),
-          AcidWashing10Temp: _NullCheck(databuff[i]['State10tempPV']),
+          AcidWashing10Temp:
+              todesimol(_NullCheck(databuff[i]['State10tempPV'])),
           AcidWashing10Time: _NullCheck(databuff[i]['State10timePV']),
-          WaterRinse11Temp: _NullCheck(databuff[i]['State11tempPV']),
+          WaterRinse11Temp: todesimol(_NullCheck(databuff[i]['State11tempPV'])),
           WaterRinse11Time: _NullCheck(databuff[i]['State11timePV']),
-          WaterRinse12Temp: _NullCheck(databuff[i]['State12tempPV']),
+          WaterRinse12Temp: todesimol(_NullCheck(databuff[i]['State12tempPV'])),
           WaterRinse12Time: _NullCheck(databuff[i]['State12timePV']),
-          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticAnodic13Temp: _NullCheck(databuff[i]['State13tempPV']),
-          ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['PartName']),
+          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['State13voltPV']),
+          ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['State13amPV']),
+          ElectrolyticAnodic13Temp:
+              todesimol(_NullCheck(databuff[i]['State13tempPV'])),
+          ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['State13rpmPV']),
           ElectrolyticAnodic13Time: _NullCheck(databuff[i]['State13timePV']),
-          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticCathod14Amp: _NullCheck(databuff[i]['PartName']),
-          ElectrolyticCathod14Temp: _NullCheck(databuff[i]['State14tempPV']),
-          ElectrolyticCathod14Rpm: _NullCheck(databuff[i]['PartName']),
+          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['State14voltPV']),
+          ElectrolyticCathod14Amp: _NullCheck(databuff[i]['State14amPV']),
+          ElectrolyticCathod14Temp:
+              todesimol(_NullCheck(databuff[i]['State14tempPV'])),
+          ElectrolyticCathod14Rpm: _NullCheck(databuff[i]['State14rpmPV']),
           ElectrolyticCathod14Time: _NullCheck(databuff[i]['State14timePV']),
-          WaterRinse15Temp: _NullCheck(databuff[i]['State15tempPV']),
+          WaterRinse15Temp: todesimol(_NullCheck(databuff[i]['State15tempPV'])),
           WaterRinse15Time: _NullCheck(databuff[i]['State15timePV']),
-          WaterRinse16Temp: _NullCheck(databuff[i]['State16tempPV']),
+          WaterRinse16Temp: todesimol(_NullCheck(databuff[i]['State16tempPV'])),
           WaterRinse16Time: _NullCheck(databuff[i]['State16timePV']),
-          Activetion17Temp: _NullCheck(databuff[i]['State17tempPV']),
+          Activetion17Temp: todesimol(_NullCheck(databuff[i]['State17tempPV'])),
           Activetion17Time: _NullCheck(databuff[i]['State17timePV']),
-          WaterRinse18Temp: _NullCheck(databuff[i]['State18tempPV']),
-          WaterRinse18Time: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Volt: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Amp: _NullCheck(databuff[i]['PartName']),
-          CuCyanide19Temp: _NullCheck(databuff[i]['State19tempPV']),
-          CuCyanide19Rpm: _NullCheck(databuff[i]['PartName']),
+          WaterRinse18Temp: todesimol(_NullCheck(databuff[i]['State18tempPV'])),
+          WaterRinse18Time: _NullCheck(databuff[i]['State18timePV']),
+          CuCyanide19Volt: _NullCheck(databuff[i]['State19voltPV']),
+          CuCyanide19Amp: _NullCheck(databuff[i]['State19amPV']),
+          CuCyanide19Temp: todesimol(_NullCheck(databuff[i]['State19tempPV'])),
+          CuCyanide19Rpm: _NullCheck(databuff[i]['State19rpmPV']),
           CuCyanide19Time: _NullCheck(databuff[i]['State19timePV']),
-          CuCyanide20Volt: _NullCheck(databuff[i]['PartName']),
-          CuCyanide20Amp: _NullCheck(databuff[i]['PartName']),
-          CuCyanide20Temp: _NullCheck(databuff[i]['State20tempPV']),
-          CuCyanide20Rpm: _NullCheck(databuff[i]['PartName']),
+          CuCyanide20Volt: _NullCheck(databuff[i]['State20voltPV']),
+          CuCyanide20Amp: _NullCheck(databuff[i]['State20amPV']),
+          CuCyanide20Temp: todesimol(_NullCheck(databuff[i]['State20tempPV'])),
+          CuCyanide20Rpm: _NullCheck(databuff[i]['State20rpmPV']),
           CuCyanide20Time: _NullCheck(databuff[i]['State20timePV']),
-          WaterRinse21Temp: _NullCheck(databuff[i]['State21tempPV']),
-          WaterRinse21Time: _NullCheck(databuff[i]['PartName']),
-          WaterRinse22Temp: _NullCheck(databuff[i]['State22tempPV']),
+          WaterRinse21Temp: todesimol(_NullCheck(databuff[i]['State21tempPV'])),
+          WaterRinse21Time: _NullCheck(databuff[i]['State21timePV']),
+          WaterRinse22Temp: todesimol(_NullCheck(databuff[i]['State22tempPV'])),
           WaterRinse22Time: _NullCheck(databuff[i]['State22timePV']),
-          ActivetionH2S042223Temp: _NullCheck(databuff[i]['State23tempPV']),
-          ActivetionH2S04223Time: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Volt: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Amp: _NullCheck(databuff[i]['PartName']),
-          CoperSulfate24Temp: _NullCheck(databuff[i]['State24tempPV']),
-          CoperSulfate24Rpm: _NullCheck(databuff[i]['PartName']),
+          ActivetionH2S042223Temp:
+              todesimol(_NullCheck(databuff[i]['State23tempPV'])),
+          ActivetionH2S04223Time: _NullCheck(databuff[i]['State23timePV']),
+          CoperSulfate24Volt: _NullCheck(databuff[i]['State24voltPV']),
+          CoperSulfate24Amp: _NullCheck(databuff[i]['State24amPV']),
+          CoperSulfate24Temp:
+              todesimol(_NullCheck(databuff[i]['State24tempPV'])),
+          CoperSulfate24Rpm: _NullCheck(databuff[i]['State24rpmPV']),
           CoperSulfate024Time: _NullCheck(databuff[i]['State24timePV']),
-          WaterRinse25Temp: _NullCheck(databuff[i]['State25tempPV']),
+          WaterRinse25Temp: todesimol(_NullCheck(databuff[i]['State25tempPV'])),
           WaterRinse25Time: _NullCheck(databuff[i]['State25timePV']),
-          SemiBrightNickel26Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel26Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel26Temp: _NullCheck(databuff[i]['State26tempPV']),
-          SemiBrightNickel26Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel26Volt: _NullCheck(databuff[i]['State26voltPV']),
+          SemiBrightNickel26Amp: _NullCheck(databuff[i]['State26amPV']),
+          SemiBrightNickel26Temp:
+              todesimol(_NullCheck(databuff[i]['State26tempPV'])),
+          SemiBrightNickel26Rpm: _NullCheck(databuff[i]['State26rpmPV']),
           SemiBrightNickel26Time: _NullCheck(databuff[i]['State26timePV']),
-          SemiBrightNickel27Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel27Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel27Temp: _NullCheck(databuff[i]['State27tempPV']),
-          SemiBrightNickel27Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel27Volt: _NullCheck(databuff[i]['State27voltPV']),
+          SemiBrightNickel27Amp: _NullCheck(databuff[i]['State27amPV']),
+          SemiBrightNickel27Temp:
+              todesimol(_NullCheck(databuff[i]['State27tempPV'])),
+          SemiBrightNickel27Rpm: _NullCheck(databuff[i]['State27rpmPV']),
           SemiBrightNickel27Time: _NullCheck(databuff[i]['State27timePV']),
-          SemiBrightNickel28Volt: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel28Amp: _NullCheck(databuff[i]['PartName']),
-          SemiBrightNickel28Temp: _NullCheck(databuff[i]['State28tempPV']),
-          SemiBrightNickel28Rpm: _NullCheck(databuff[i]['PartName']),
+          SemiBrightNickel28Volt: _NullCheck(databuff[i]['State28voltPV']),
+          SemiBrightNickel28Amp: _NullCheck(databuff[i]['State28amPV']),
+          SemiBrightNickel28Temp:
+              todesimol(_NullCheck(databuff[i]['State28tempPV'])),
+          SemiBrightNickel28Rpm: _NullCheck(databuff[i]['State28rpmPV']),
           SemiBrightNickel28Time: _NullCheck(databuff[i]['State28timePV']),
-          WaterRinse29Temp: _NullCheck(databuff[i]['State29tempPV']),
+          WaterRinse29Temp: todesimol(_NullCheck(databuff[i]['State29tempPV'])),
           WaterRinse29Time: _NullCheck(databuff[i]['State29timePV']),
-          DullSnPlating30Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating30Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating30Temp: _NullCheck(databuff[i]['State30tempPV']),
-          DullSnPlating30Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating30Volt: _NullCheck(databuff[i]['State30voltPV']),
+          DullSnPlating30Amp: _NullCheck(databuff[i]['State30amPV']),
+          DullSnPlating30Temp:
+              todesimol(_NullCheck(databuff[i]['State30tempPV'])),
+          DullSnPlating30Rpm: _NullCheck(databuff[i]['State30rpmPV']),
           DullSnPlating30Time: _NullCheck(databuff[i]['State30timePV']),
-          DullSnPlating31Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating31Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating31Temp: _NullCheck(databuff[i]['State31tempPV']),
-          DullSnPlating31Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating31Volt: _NullCheck(databuff[i]['State31voltPV']),
+          DullSnPlating31Amp: _NullCheck(databuff[i]['State31amPV']),
+          DullSnPlating31Temp:
+              todesimol(_NullCheck(databuff[i]['State31tempPV'])),
+          DullSnPlating31Rpm: _NullCheck(databuff[i]['State31rpmPV']),
           DullSnPlating31Time: _NullCheck(databuff[i]['State31timePV']),
-          DullSnPlating32Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating32Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating32Temp: _NullCheck(databuff[i]['State32tempPV']),
-          DullSnPlating32Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating32Volt: _NullCheck(databuff[i]['State32voltPV']),
+          DullSnPlating32Amp: _NullCheck(databuff[i]['State32amPV']),
+          DullSnPlating32Temp:
+              todesimol(_NullCheck(databuff[i]['State32tempPV'])),
+          DullSnPlating32Rpm: _NullCheck(databuff[i]['State32rpmPV']),
           DullSnPlating32Time: _NullCheck(databuff[i]['State32timePV']),
-          DullSnPlating33Volt: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating33Amp: _NullCheck(databuff[i]['PartName']),
-          DullSnPlating33Temp: _NullCheck(databuff[i]['State33tempPV']),
-          DullSnPlating33Rpm: _NullCheck(databuff[i]['PartName']),
+          DullSnPlating33Volt: _NullCheck(databuff[i]['State33voltPV']),
+          DullSnPlating33Amp: _NullCheck(databuff[i]['State33amPV']),
+          DullSnPlating33Temp:
+              todesimol(_NullCheck(databuff[i]['State33tempPV'])),
+          DullSnPlating33Rpm: _NullCheck(databuff[i]['State33rpmPV']),
           DullSnPlating33Time: _NullCheck(databuff[i]['State33timePV']),
-          WaterRinse34Temp: _NullCheck(databuff[i]['State34tempPV']),
+          WaterRinse34Temp: todesimol(_NullCheck(databuff[i]['State34tempPV'])),
           WaterRinse34Time: _NullCheck(databuff[i]['State34timePV']),
-          BrightSnPlating35Volt: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating35Amp: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating35Temp: _NullCheck(databuff[i]['State35tempPV']),
-          BrightSnPlating35Rpm: _NullCheck(databuff[i]['PartName']),
+          BrightSnPlating35Volt: _NullCheck(databuff[i]['State35voltPV']),
+          BrightSnPlating35Amp: _NullCheck(databuff[i]['State35amPV']),
+          BrightSnPlating35Temp:
+              todesimol(_NullCheck(databuff[i]['State35tempPV'])),
+          BrightSnPlating35Rpm: _NullCheck(databuff[i]['State35rpmPV']),
           BrightSnPlating35Time: _NullCheck(databuff[i]['State35timePV']),
-          BrightSnPlating36Volt: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating36Amp: _NullCheck(databuff[i]['PartName']),
-          BrightSnPlating36Temp: _NullCheck(databuff[i]['State36tempPV']),
-          BrightSnPlating36Rpm: _NullCheck(databuff[i]['PartName']),
+          BrightSnPlating36Volt: _NullCheck(databuff[i]['State36voltPV']),
+          BrightSnPlating36Amp: _NullCheck(databuff[i]['State36amPV']),
+          BrightSnPlating36Temp:
+              todesimol(_NullCheck(databuff[i]['State36tempPV'])),
+          BrightSnPlating36Rpm: _NullCheck(databuff[i]['State36rpmPV']),
           BrightSnPlating36Time: _NullCheck(databuff[i]['State36timePV']),
-          WaterRinse37Temp: _NullCheck(databuff[i]['State37tempPV']),
+          WaterRinse37Temp: todesimol(_NullCheck(databuff[i]['State37tempPV'])),
           WaterRinse37Time: _NullCheck(databuff[i]['State37timePV']),
-          Postrement38Temp: _NullCheck(databuff[i]['State38tempPV']),
+          Postrement38Temp: todesimol(_NullCheck(databuff[i]['State38tempPV'])),
           Postrement38Time: _NullCheck(databuff[i]['State38timePV']),
-          Postrement39Temp: _NullCheck(databuff[i]['State39tempPV']),
+          Postrement39Temp: todesimol(_NullCheck(databuff[i]['State39tempPV'])),
           Postrement39Time: _NullCheck(databuff[i]['State39timePV']),
-          HotWaterRinse40Temp: _NullCheck(databuff[i]['State40tempPV']),
+          HotWaterRinse40Temp:
+              todesimol(_NullCheck(databuff[i]['State40tempPV'])),
           HotWaterRinse40Time: _NullCheck(databuff[i]['State40timePV']),
-          HotWaterRinse41Temp: _NullCheck(databuff[i]['State41tempPV']),
+          HotWaterRinse41Temp:
+              todesimol(_NullCheck(databuff[i]['State41tempPV'])),
           HotWaterRinse41Time: _NullCheck(databuff[i]['State41timePV']),
         ));
       }
@@ -510,7 +542,8 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Degressing02Time);
       row.add(data[i].Degressing03Temp);
       row.add(data[i].Degressing03Time);
-      row.add(data[i].Shower04Temp);
+      // row.add(data[i].Shower04Temp);
+      row.add("-");
       row.add(data[i].Shower04Time);
       row.add(data[i].Degressing05Temp);
       row.add(data[i].Degressing05Time);
@@ -518,38 +551,45 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Degressing06Time);
       row.add(data[i].Degressing07Temp);
       row.add(data[i].Degressing07Time);
-      row.add(data[i].WaterRinse08Temp);
+      // row.add(data[i].WaterRinse08Temp);
+      row.add("-");
       row.add(data[i].WaterRinse08Time);
-      row.add(data[i].WaterRinse09Temp);
+      // row.add(data[i].WaterRinse09Temp);
+      row.add("-");
       row.add(data[i].WaterRinse09Time);
       row.add(data[i].AcidWashing10Temp);
       row.add(data[i].AcidWashing10Time);
-      row.add(data[i].WaterRinse11Temp);
+      // row.add(data[i].WaterRinse11Temp);
+      row.add("-");
       row.add(data[i].WaterRinse11Time);
-      row.add(data[i].WaterRinse12Temp);
+      // row.add(data[i].WaterRinse12Temp);
+      row.add("-");
       row.add(data[i].WaterRinse12Time);
-
       row.add(data[i].ElectrolyticAnodic13Volt);
       row.add(data[i].ElectrolyticAnodic13Amp);
       row.add(data[i].ElectrolyticAnodic13Temp);
-      row.add(data[i].ElectrolyticAnodic13Rpm);
+      // row.add(data[i].ElectrolyticAnodic13Rpm);
+      row.add("-");
       row.add(data[i].ElectrolyticAnodic13Time);
       row.add(data[i].ElectrolyticCathod14Volt);
       row.add(data[i].ElectrolyticCathod14Amp);
       row.add(data[i].ElectrolyticCathod14Temp);
-      row.add(data[i].ElectrolyticCathod14Rpm);
+      // row.add(data[i].ElectrolyticCathod14Rpm);
+      row.add("-");
       row.add(data[i].ElectrolyticCathod14Time);
-      row.add(data[i].WaterRinse15Temp);
+      // row.add(data[i].WaterRinse15Temp);
+      row.add("-");
       row.add(data[i].WaterRinse15Time);
-      row.add(data[i].WaterRinse16Temp);
+      // row.add(data[i].WaterRinse16Temp);
+      row.add("-");
       row.add(data[i].WaterRinse16Time);
       row.add(data[i].Activetion17Temp);
       row.add(data[i].Activetion17Time);
-      row.add(data[i].WaterRinse18Temp);
+      // row.add(data[i].WaterRinse18Temp);
+      row.add("-");
       row.add(data[i].WaterRinse18Time);
       row.add(data[i].CuCyanide19Volt);
       row.add(data[i].CuCyanide19Amp);
-
       row.add(data[i].CuCyanide19Temp);
       row.add(data[i].CuCyanide19Rpm);
       row.add(data[i].CuCyanide19Time);
@@ -558,19 +598,21 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].CuCyanide20Temp);
       row.add(data[i].CuCyanide20Rpm);
       row.add(data[i].CuCyanide20Time);
-      row.add(data[i].WaterRinse21Temp);
+      // row.add(data[i].WaterRinse21Temp);
+      row.add("-");
       row.add(data[i].WaterRinse21Time);
-      row.add(data[i].WaterRinse22Temp);
+      // row.add(data[i].WaterRinse22Temp);
+      row.add("-");
       row.add(data[i].WaterRinse22Time);
       row.add(data[i].ActivetionH2S042223Temp);
       row.add(data[i].ActivetionH2S04223Time);
       row.add(data[i].CoperSulfate24Volt);
       row.add(data[i].CoperSulfate24Amp);
       row.add(data[i].CoperSulfate24Temp);
-      row.add(data[i].CoperSulfate24Rpm);
+      // row.add(data[i].CoperSulfate24Rpm);
+      row.add("-");
       row.add(data[i].CoperSulfate024Time);
       row.add(data[i].WaterRinse25Temp);
-
       row.add(data[i].WaterRinse25Time);
       row.add(data[i].SemiBrightNickel26Volt);
       row.add(data[i].SemiBrightNickel26Amp);
@@ -587,11 +629,11 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].SemiBrightNickel28Temp);
       row.add(data[i].SemiBrightNickel28Rpm);
       row.add(data[i].SemiBrightNickel28Time);
-      row.add(data[i].WaterRinse29Temp);
+      // row.add(data[i].WaterRinse29Temp);
+      row.add("-");
       row.add(data[i].WaterRinse29Time);
       row.add(data[i].DullSnPlating30Volt);
       row.add(data[i].DullSnPlating30Amp);
-
       row.add(data[i].DullSnPlating30Temp);
       row.add(data[i].DullSnPlating30Rpm);
       row.add(data[i].DullSnPlating30Time);
@@ -610,9 +652,9 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].DullSnPlating33Temp);
       row.add(data[i].DullSnPlating33Rpm);
       row.add(data[i].DullSnPlating33Time);
-      row.add(data[i].WaterRinse34Temp);
+      // row.add(data[i].WaterRinse34Temp);
+      row.add("-");
       row.add(data[i].WaterRinse34Time);
-
       row.add(data[i].BrightSnPlating35Volt);
       row.add(data[i].BrightSnPlating35Amp);
       row.add(data[i].BrightSnPlating35Temp);
@@ -629,9 +671,11 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Postrement38Time);
       row.add(data[i].Postrement39Temp);
       row.add(data[i].Postrement39Time);
-      row.add(data[i].HotWaterRinse40Temp);
+      // row.add(data[i].HotWaterRinse40Temp);
+      row.add("-");
       row.add(data[i].HotWaterRinse40Time);
-      row.add(data[i].HotWaterRinse41Temp);
+      // row.add(data[i].HotWaterRinse41Temp);
+      row.add("-");
       row.add(data[i].HotWaterRinse41Time);
     }
 
@@ -670,4 +714,13 @@ bool isNumeric(String s) {
     return false;
   }
   return double.tryParse(s) != null;
+}
+
+String todesimol(String s) {
+  String output = '-';
+  if (s != '-') {
+    output = (double.parse(ConverstStr(s)) / 10).toStringAsFixed(1);
+  }
+
+  return output;
 }
