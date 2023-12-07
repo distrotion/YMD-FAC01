@@ -2,14 +2,16 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/01-getactualdata.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
+import '../../widget/common/ComInputText.dart';
 import '../../widget/table/mastertable.dart';
-import '../../widget/table/tablebox.dart';
+import 'dashboardvar.dart';
 
 late BuildContext dhcontext;
 
@@ -89,6 +91,11 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                   child: Column(children: [
                     for (int i = 0; i < _datatable.length; i++) ...[
                       MasterTableDATA(
+                        SetParName: (v) {
+                          print(v);
+                          dashboardvar.SetPartName = '';
+                          SetPartName(context, v);
+                        },
                         nint: i,
                         NO: _datatable[i].NO,
                         Item: _datatable[i].Item,
@@ -261,6 +268,93 @@ class _DashBoardBodyState extends State<DashBoardBody> {
           ),
         ),
       ),
+    );
+  }
+
+  void SetPartName(
+    BuildContext contextin,
+    String ItemID,
+  ) {
+    showDialog(
+      context: contextin,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: SizedBox(
+              height: 200,
+              width: 300,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pop(contextin);
+                        },
+                        child: const SizedBox(
+                          height: 24,
+                          width: 36,
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 12),
+                            child: Center(child: Icon(Icons.close)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text(ItemID),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    ComInputText(
+                      width: 250,
+                      nLimitedChar: 200,
+                      height: 40,
+                      isContr: dashboardvar.iscontrol,
+                      fnContr: (input) {
+                        setState(() {
+                          dashboardvar.iscontrol = input;
+                        });
+                      },
+                      sValue: dashboardvar.SetPartName,
+                      returnfunc: (String s) {
+                        dashboardvar.SetPartName = s;
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    InkWell(
+                      onTap: () async {
+                        final response = await Dio().post(
+                          server + "textpartname",
+                          data: {
+                            "PartName": dashboardvar.SetPartName,
+                            "ItemID": ItemID,
+                          },
+                        );
+                        dhcontext
+                            .read<ACTUALDATA_Bloc>()
+                            .add(ACTUALDATA_Pressed());
+                        Navigator.pop(contextin);
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 250,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text("SAVE"),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )),
+        );
+      },
     );
   }
 }

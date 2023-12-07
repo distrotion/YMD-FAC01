@@ -87,13 +87,15 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           WaterRinse11Time: _NullCheck(databuff[i]['State11timePV']),
           WaterRinse12Temp: todesimol(_NullCheck(databuff[i]['State12tempPV'])),
           WaterRinse12Time: _NullCheck(databuff[i]['State12timePV']),
-          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['State13voltPV']),
+          ElectrolyticAnodic13Volt:
+              todesimol(_NullCheck(databuff[i]['State13voltPV'])),
           ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['State13amPV']),
           ElectrolyticAnodic13Temp:
               todesimol(_NullCheck(databuff[i]['State13tempPV'])),
           ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['State13rpmPV']),
           ElectrolyticAnodic13Time: _NullCheck(databuff[i]['State13timePV']),
-          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['State14voltPV']),
+          ElectrolyticCathod14Volt:
+              todesimol(_NullCheck(databuff[i]['State14voltPV'])),
           ElectrolyticCathod14Amp: _NullCheck(databuff[i]['State14amPV']),
           ElectrolyticCathod14Temp:
               todesimol(_NullCheck(databuff[i]['State14tempPV'])),
@@ -107,12 +109,12 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Activetion17Time: _NullCheck(databuff[i]['State17timePV']),
           WaterRinse18Temp: todesimol(_NullCheck(databuff[i]['State18tempPV'])),
           WaterRinse18Time: _NullCheck(databuff[i]['State18timePV']),
-          CuCyanide19Volt: _NullCheck(databuff[i]['State19voltPV']),
+          CuCyanide19Volt: todesimol(_NullCheck(databuff[i]['State19voltPV'])),
           CuCyanide19Amp: _NullCheck(databuff[i]['State19amPV']),
           CuCyanide19Temp: todesimol(_NullCheck(databuff[i]['State19tempPV'])),
           CuCyanide19Rpm: _NullCheck(databuff[i]['State19rpmPV']),
           CuCyanide19Time: _NullCheck(databuff[i]['State19timePV']),
-          CuCyanide20Volt: _NullCheck(databuff[i]['State20voltPV']),
+          CuCyanide20Volt: todesimol(_NullCheck(databuff[i]['State20voltPV'])),
           CuCyanide20Amp: _NullCheck(databuff[i]['State20amPV']),
           CuCyanide20Temp: todesimol(_NullCheck(databuff[i]['State20tempPV'])),
           CuCyanide20Rpm: _NullCheck(databuff[i]['State20rpmPV']),
@@ -124,7 +126,8 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           ActivetionH2S042223Temp:
               todesimol(_NullCheck(databuff[i]['State23tempPV'])),
           ActivetionH2S04223Time: _NullCheck(databuff[i]['State23timePV']),
-          CoperSulfate24Volt: _NullCheck(databuff[i]['State24voltPV']),
+          CoperSulfate24Volt:
+              todesimol(_NullCheck(databuff[i]['State24voltPV'])),
           CoperSulfate24Amp: _NullCheck(databuff[i]['State24amPV']),
           CoperSulfate24Temp:
               todesimol(_NullCheck(databuff[i]['State24tempPV'])),
@@ -132,19 +135,22 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           CoperSulfate024Time: _NullCheck(databuff[i]['State24timePV']),
           WaterRinse25Temp: todesimol(_NullCheck(databuff[i]['State25tempPV'])),
           WaterRinse25Time: _NullCheck(databuff[i]['State25timePV']),
-          SemiBrightNickel26Volt: _NullCheck(databuff[i]['State26voltPV']),
+          SemiBrightNickel26Volt:
+              todesimol(_NullCheck(databuff[i]['State26voltPV'])),
           SemiBrightNickel26Amp: _NullCheck(databuff[i]['State26amPV']),
           SemiBrightNickel26Temp:
               todesimol(_NullCheck(databuff[i]['State26tempPV'])),
           SemiBrightNickel26Rpm: _NullCheck(databuff[i]['State26rpmPV']),
           SemiBrightNickel26Time: _NullCheck(databuff[i]['State26timePV']),
-          SemiBrightNickel27Volt: _NullCheck(databuff[i]['State27voltPV']),
+          SemiBrightNickel27Volt:
+              todesimol(_NullCheck(databuff[i]['State27voltPV'])),
           SemiBrightNickel27Amp: _NullCheck(databuff[i]['State27amPV']),
           SemiBrightNickel27Temp:
               todesimol(_NullCheck(databuff[i]['State27tempPV'])),
           SemiBrightNickel27Rpm: _NullCheck(databuff[i]['State27rpmPV']),
           SemiBrightNickel27Time: _NullCheck(databuff[i]['State27timePV']),
-          SemiBrightNickel28Volt: _NullCheck(databuff[i]['State28voltPV']),
+          SemiBrightNickel28Volt:
+              todesimol(_NullCheck(databuff[i]['State28voltPV'])),
           SemiBrightNickel28Amp: _NullCheck(databuff[i]['State28amPV']),
           SemiBrightNickel28Temp:
               todesimol(_NullCheck(databuff[i]['State28tempPV'])),
@@ -152,25 +158,29 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           SemiBrightNickel28Time: _NullCheck(databuff[i]['State28timePV']),
           WaterRinse29Temp: todesimol(_NullCheck(databuff[i]['State29tempPV'])),
           WaterRinse29Time: _NullCheck(databuff[i]['State29timePV']),
-          DullSnPlating30Volt: _NullCheck(databuff[i]['State30voltPV']),
+          DullSnPlating30Volt:
+              todesimol(_NullCheck(databuff[i]['State30voltPV'])),
           DullSnPlating30Amp: _NullCheck(databuff[i]['State30amPV']),
           DullSnPlating30Temp:
               todesimol(_NullCheck(databuff[i]['State30tempPV'])),
           DullSnPlating30Rpm: _NullCheck(databuff[i]['State30rpmPV']),
           DullSnPlating30Time: _NullCheck(databuff[i]['State30timePV']),
-          DullSnPlating31Volt: _NullCheck(databuff[i]['State31voltPV']),
+          DullSnPlating31Volt:
+              todesimol(_NullCheck(databuff[i]['State31voltPV'])),
           DullSnPlating31Amp: _NullCheck(databuff[i]['State31amPV']),
           DullSnPlating31Temp:
               todesimol(_NullCheck(databuff[i]['State31tempPV'])),
           DullSnPlating31Rpm: _NullCheck(databuff[i]['State31rpmPV']),
           DullSnPlating31Time: _NullCheck(databuff[i]['State31timePV']),
-          DullSnPlating32Volt: _NullCheck(databuff[i]['State32voltPV']),
+          DullSnPlating32Volt:
+              todesimol(_NullCheck(databuff[i]['State32voltPV'])),
           DullSnPlating32Amp: _NullCheck(databuff[i]['State32amPV']),
           DullSnPlating32Temp:
               todesimol(_NullCheck(databuff[i]['State32tempPV'])),
           DullSnPlating32Rpm: _NullCheck(databuff[i]['State32rpmPV']),
           DullSnPlating32Time: _NullCheck(databuff[i]['State32timePV']),
-          DullSnPlating33Volt: _NullCheck(databuff[i]['State33voltPV']),
+          DullSnPlating33Volt:
+              todesimol(_NullCheck(databuff[i]['State33voltPV'])),
           DullSnPlating33Amp: _NullCheck(databuff[i]['State33amPV']),
           DullSnPlating33Temp:
               todesimol(_NullCheck(databuff[i]['State33tempPV'])),
@@ -178,13 +188,15 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           DullSnPlating33Time: _NullCheck(databuff[i]['State33timePV']),
           WaterRinse34Temp: todesimol(_NullCheck(databuff[i]['State34tempPV'])),
           WaterRinse34Time: _NullCheck(databuff[i]['State34timePV']),
-          BrightSnPlating35Volt: _NullCheck(databuff[i]['State35voltPV']),
+          BrightSnPlating35Volt:
+              todesimol(_NullCheck(databuff[i]['State35voltPV'])),
           BrightSnPlating35Amp: _NullCheck(databuff[i]['State35amPV']),
           BrightSnPlating35Temp:
               todesimol(_NullCheck(databuff[i]['State35tempPV'])),
           BrightSnPlating35Rpm: _NullCheck(databuff[i]['State35rpmPV']),
           BrightSnPlating35Time: _NullCheck(databuff[i]['State35timePV']),
-          BrightSnPlating36Volt: _NullCheck(databuff[i]['State36voltPV']),
+          BrightSnPlating36Volt:
+              todesimol(_NullCheck(databuff[i]['State36voltPV'])),
           BrightSnPlating36Amp: _NullCheck(databuff[i]['State36amPV']),
           BrightSnPlating36Temp:
               todesimol(_NullCheck(databuff[i]['State36tempPV'])),
@@ -263,13 +275,15 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           WaterRinse11Time: _NullCheck(databuff[i]['State11timePV']),
           WaterRinse12Temp: todesimol(_NullCheck(databuff[i]['State12tempPV'])),
           WaterRinse12Time: _NullCheck(databuff[i]['State12timePV']),
-          ElectrolyticAnodic13Volt: _NullCheck(databuff[i]['State13voltPV']),
+          ElectrolyticAnodic13Volt:
+              todesimol(_NullCheck(databuff[i]['State13voltPV'])),
           ElectrolyticAnodic13Amp: _NullCheck(databuff[i]['State13amPV']),
           ElectrolyticAnodic13Temp:
               todesimol(_NullCheck(databuff[i]['State13tempPV'])),
           ElectrolyticAnodic13Rpm: _NullCheck(databuff[i]['State13rpmPV']),
           ElectrolyticAnodic13Time: _NullCheck(databuff[i]['State13timePV']),
-          ElectrolyticCathod14Volt: _NullCheck(databuff[i]['State14voltPV']),
+          ElectrolyticCathod14Volt:
+              todesimol(_NullCheck(databuff[i]['State14voltPV'])),
           ElectrolyticCathod14Amp: _NullCheck(databuff[i]['State14amPV']),
           ElectrolyticCathod14Temp:
               todesimol(_NullCheck(databuff[i]['State14tempPV'])),
@@ -283,12 +297,12 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Activetion17Time: _NullCheck(databuff[i]['State17timePV']),
           WaterRinse18Temp: todesimol(_NullCheck(databuff[i]['State18tempPV'])),
           WaterRinse18Time: _NullCheck(databuff[i]['State18timePV']),
-          CuCyanide19Volt: _NullCheck(databuff[i]['State19voltPV']),
+          CuCyanide19Volt: todesimol(_NullCheck(databuff[i]['State19voltPV'])),
           CuCyanide19Amp: _NullCheck(databuff[i]['State19amPV']),
           CuCyanide19Temp: todesimol(_NullCheck(databuff[i]['State19tempPV'])),
           CuCyanide19Rpm: _NullCheck(databuff[i]['State19rpmPV']),
           CuCyanide19Time: _NullCheck(databuff[i]['State19timePV']),
-          CuCyanide20Volt: _NullCheck(databuff[i]['State20voltPV']),
+          CuCyanide20Volt: todesimol(_NullCheck(databuff[i]['State20voltPV'])),
           CuCyanide20Amp: _NullCheck(databuff[i]['State20amPV']),
           CuCyanide20Temp: todesimol(_NullCheck(databuff[i]['State20tempPV'])),
           CuCyanide20Rpm: _NullCheck(databuff[i]['State20rpmPV']),
@@ -300,7 +314,8 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           ActivetionH2S042223Temp:
               todesimol(_NullCheck(databuff[i]['State23tempPV'])),
           ActivetionH2S04223Time: _NullCheck(databuff[i]['State23timePV']),
-          CoperSulfate24Volt: _NullCheck(databuff[i]['State24voltPV']),
+          CoperSulfate24Volt:
+              todesimol(_NullCheck(databuff[i]['State24voltPV'])),
           CoperSulfate24Amp: _NullCheck(databuff[i]['State24amPV']),
           CoperSulfate24Temp:
               todesimol(_NullCheck(databuff[i]['State24tempPV'])),
@@ -308,19 +323,22 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           CoperSulfate024Time: _NullCheck(databuff[i]['State24timePV']),
           WaterRinse25Temp: todesimol(_NullCheck(databuff[i]['State25tempPV'])),
           WaterRinse25Time: _NullCheck(databuff[i]['State25timePV']),
-          SemiBrightNickel26Volt: _NullCheck(databuff[i]['State26voltPV']),
+          SemiBrightNickel26Volt:
+              todesimol(_NullCheck(databuff[i]['State26voltPV'])),
           SemiBrightNickel26Amp: _NullCheck(databuff[i]['State26amPV']),
           SemiBrightNickel26Temp:
               todesimol(_NullCheck(databuff[i]['State26tempPV'])),
           SemiBrightNickel26Rpm: _NullCheck(databuff[i]['State26rpmPV']),
           SemiBrightNickel26Time: _NullCheck(databuff[i]['State26timePV']),
-          SemiBrightNickel27Volt: _NullCheck(databuff[i]['State27voltPV']),
+          SemiBrightNickel27Volt:
+              todesimol(_NullCheck(databuff[i]['State27voltPV'])),
           SemiBrightNickel27Amp: _NullCheck(databuff[i]['State27amPV']),
           SemiBrightNickel27Temp:
               todesimol(_NullCheck(databuff[i]['State27tempPV'])),
           SemiBrightNickel27Rpm: _NullCheck(databuff[i]['State27rpmPV']),
           SemiBrightNickel27Time: _NullCheck(databuff[i]['State27timePV']),
-          SemiBrightNickel28Volt: _NullCheck(databuff[i]['State28voltPV']),
+          SemiBrightNickel28Volt:
+              todesimol(_NullCheck(databuff[i]['State28voltPV'])),
           SemiBrightNickel28Amp: _NullCheck(databuff[i]['State28amPV']),
           SemiBrightNickel28Temp:
               todesimol(_NullCheck(databuff[i]['State28tempPV'])),
@@ -328,25 +346,29 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           SemiBrightNickel28Time: _NullCheck(databuff[i]['State28timePV']),
           WaterRinse29Temp: todesimol(_NullCheck(databuff[i]['State29tempPV'])),
           WaterRinse29Time: _NullCheck(databuff[i]['State29timePV']),
-          DullSnPlating30Volt: _NullCheck(databuff[i]['State30voltPV']),
+          DullSnPlating30Volt:
+              todesimol(_NullCheck(databuff[i]['State30voltPV'])),
           DullSnPlating30Amp: _NullCheck(databuff[i]['State30amPV']),
           DullSnPlating30Temp:
               todesimol(_NullCheck(databuff[i]['State30tempPV'])),
           DullSnPlating30Rpm: _NullCheck(databuff[i]['State30rpmPV']),
           DullSnPlating30Time: _NullCheck(databuff[i]['State30timePV']),
-          DullSnPlating31Volt: _NullCheck(databuff[i]['State31voltPV']),
+          DullSnPlating31Volt:
+              todesimol(_NullCheck(databuff[i]['State31voltPV'])),
           DullSnPlating31Amp: _NullCheck(databuff[i]['State31amPV']),
           DullSnPlating31Temp:
               todesimol(_NullCheck(databuff[i]['State31tempPV'])),
           DullSnPlating31Rpm: _NullCheck(databuff[i]['State31rpmPV']),
           DullSnPlating31Time: _NullCheck(databuff[i]['State31timePV']),
-          DullSnPlating32Volt: _NullCheck(databuff[i]['State32voltPV']),
+          DullSnPlating32Volt:
+              todesimol(_NullCheck(databuff[i]['State32voltPV'])),
           DullSnPlating32Amp: _NullCheck(databuff[i]['State32amPV']),
           DullSnPlating32Temp:
               todesimol(_NullCheck(databuff[i]['State32tempPV'])),
           DullSnPlating32Rpm: _NullCheck(databuff[i]['State32rpmPV']),
           DullSnPlating32Time: _NullCheck(databuff[i]['State32timePV']),
-          DullSnPlating33Volt: _NullCheck(databuff[i]['State33voltPV']),
+          DullSnPlating33Volt:
+              todesimol(_NullCheck(databuff[i]['State33voltPV'])),
           DullSnPlating33Amp: _NullCheck(databuff[i]['State33amPV']),
           DullSnPlating33Temp:
               todesimol(_NullCheck(databuff[i]['State33tempPV'])),
@@ -354,13 +376,15 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           DullSnPlating33Time: _NullCheck(databuff[i]['State33timePV']),
           WaterRinse34Temp: todesimol(_NullCheck(databuff[i]['State34tempPV'])),
           WaterRinse34Time: _NullCheck(databuff[i]['State34timePV']),
-          BrightSnPlating35Volt: _NullCheck(databuff[i]['State35voltPV']),
+          BrightSnPlating35Volt:
+              todesimol(_NullCheck(databuff[i]['State35voltPV'])),
           BrightSnPlating35Amp: _NullCheck(databuff[i]['State35amPV']),
           BrightSnPlating35Temp:
               todesimol(_NullCheck(databuff[i]['State35tempPV'])),
           BrightSnPlating35Rpm: _NullCheck(databuff[i]['State35rpmPV']),
           BrightSnPlating35Time: _NullCheck(databuff[i]['State35timePV']),
-          BrightSnPlating36Volt: _NullCheck(databuff[i]['State36voltPV']),
+          BrightSnPlating36Volt:
+              todesimol(_NullCheck(databuff[i]['State36voltPV'])),
           BrightSnPlating36Amp: _NullCheck(databuff[i]['State36amPV']),
           BrightSnPlating36Temp:
               todesimol(_NullCheck(databuff[i]['State36tempPV'])),

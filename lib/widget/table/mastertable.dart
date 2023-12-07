@@ -725,6 +725,7 @@ class MasterTableDATA extends StatelessWidget {
     this.HotWaterRinse41Temp,
     this.HotWaterRinse41Time,
     this.nint,
+    this.SetParName,
   });
   String? NO;
   String? Item;
@@ -873,6 +874,8 @@ class MasterTableDATA extends StatelessWidget {
   String? HotWaterRinse41Time;
   int? nint;
 
+  Function(String)? SetParName;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -911,14 +914,21 @@ class MasterTableDATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0_data(
-                      Head: PartName,
-                    ),
-                  ],
+              InkWell(
+                onTap: () {
+                  if (SetParName != null) {
+                    SetParName!(Item ?? '');
+                  }
+                },
+                child: SizedBox(
+                  width: 120,
+                  child: Column(
+                    children: [
+                      rowbox_type0_data(
+                        Head: PartName,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(

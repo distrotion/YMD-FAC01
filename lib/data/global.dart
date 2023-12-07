@@ -88,7 +88,8 @@ class actDATA {
 late Timer DHtimer;
 late Timer JGC_DASHBOARDtimer;
 
-String GserverYMD = 'http://192.168.71.102:1885/';
+// String GserverYMD = 'http://192.168.71.102:1885/';
+String GserverYMD = 'http://192.168.1.148:1885/';
 
 //
 // String GserverNEWTEST = 'http://127.0.0.1:14500/';
