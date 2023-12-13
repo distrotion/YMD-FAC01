@@ -2,12 +2,14 @@ import 'package:datamonitor01/page/page1.dart';
 import 'package:datamonitor01/page/page2.dart';
 import 'package:flutter/material.dart';
 
+import 'page7.dart';
+
 class Page0 extends StatelessWidget {
   const Page0({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Page1();
+    return Page7();
   }
 }
 

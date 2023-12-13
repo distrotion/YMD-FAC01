@@ -202,11 +202,11 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
           if (menu_AUTOCU01) ...[
             menu_normal(
               name: "DASHBOARD",
-              page: Page1(),
+              page: Page3(),
             ),
             menu_normal(
               name: "Report",
-              page: Page2(),
+              page: Page4(),
             ),
           ],
 
@@ -263,11 +263,11 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
           if (menu_AUTOPL02) ...[
             menu_normal(
               name: "DASHBOARD",
-              page: Page1(),
+              page: Page5(),
             ),
             menu_normal(
               name: "Report",
-              page: Page2(),
+              page: Page6(),
             ),
           ],
 

@@ -27,3 +27,7 @@ String GserverYMD = 'http://192.168.1.148:1885/';
 
 //
 // String GserverNEWTEST = 'http://127.0.0.1:14500/';
+
+late Timer Dashboardvar_AUTOSN_DHtimer;
+late Timer Dashboardvar_AUTOCU_DHtimer;
+late Timer Dashboardvar_AUTOPEELING02_DHtimer;

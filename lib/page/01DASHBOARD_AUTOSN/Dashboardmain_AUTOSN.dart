@@ -6,37 +6,37 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/BlocEvent/01-getactualdata.dart';
+import '../../bloc/BlocEvent/01-01-getactualdata.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../widget/common/ComInputText.dart';
 import '../../widget/table/MasterTable_AUTOSN.dart';
 import 'Dashboardvar_AUTOSN.dart';
 
-late BuildContext dhcontext;
+late BuildContext dhcontext_autosn;
 
-ScrollController controllerReportH = ScrollController();
-ScrollController controllerReportV = ScrollController();
+ScrollController _controllerReportH = ScrollController();
+ScrollController _controllerReportV = ScrollController();
 
-class DashBoard extends StatelessWidget {
-  DashBoard({Key? key, this.datatable}) : super(key: key);
+class DashBoard_AUTOSN extends StatelessWidget {
+  DashBoard_AUTOSN({Key? key, this.datatable}) : super(key: key);
   List<YMDDATAmodel>? datatable;
 
   @override
   Widget build(BuildContext context) {
-    // dhcontext = context;
-    return DashBoardBody(
+    dhcontext_autosn = context;
+    return DashBoard_AUTOSNBody(
       datatable: datatable,
     );
   }
 }
 
-class DashBoardBody extends StatefulWidget {
-  DashBoardBody({Key? key, this.datatable}) : super(key: key);
+class DashBoard_AUTOSNBody extends StatefulWidget {
+  DashBoard_AUTOSNBody({Key? key, this.datatable}) : super(key: key);
   List<YMDDATAmodel>? datatable;
 
   @override
-  State<DashBoardBody> createState() => _DashBoardBodyState();
+  State<DashBoard_AUTOSNBody> createState() => _DashBoard_AUTOSNBodyState();
 }
 
 int ing = 0;
@@ -47,16 +47,16 @@ int ing = 0;
 //     print(ing);
 // });
 
-class _DashBoardBodyState extends State<DashBoardBody> {
+class _DashBoard_AUTOSNBodyState extends State<DashBoard_AUTOSNBody> {
   @override
   void initState() {
     super.initState();
-    // dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
-    // Timer.periodic(const Duration(seconds: 5), (timmer) {
-    //   dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    context.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    Timer.periodic(const Duration(seconds: 5), (timmer) {
+      context.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
 
-    //   Dashboardvar_AUTOSN.DHtimer = timmer;
-    // });
+      Dashboardvar_AUTOSN_DHtimer = timmer;
+    });
 
     //----------
     // timer.cancel();
@@ -64,7 +64,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
 
   @override
   Widget build(BuildContext context) {
-    dhcontext = context;
+    // dhcontext_autosn = context;
     Pagememory = 1;
     List<YMDDATAmodel> _datatable = widget.datatable ?? [];
 
@@ -73,20 +73,23 @@ class _DashBoardBodyState extends State<DashBoardBody> {
       // width: 800,
 
       child: Scrollbar(
-        controller: controllerReportH,
+        controller: _controllerReportH,
         thumbVisibility: true,
         interactive: true,
         thickness: 10,
         radius: const Radius.circular(20),
         child: SingleChildScrollView(
-          controller: controllerReportH,
+          controller: _controllerReportH,
           scrollDirection: Axis.horizontal,
           child: Column(
             children: [
+              Container(
+                child: Text(""),
+              ),
               MasterTable_AUTOSN(),
               Expanded(
                 child: SingleChildScrollView(
-                  controller: controllerReportV,
+                  controller: _controllerReportV,
                   // scrollDirection: Axis.horizontal,
                   child: Column(children: [
                     for (int i = 0; i < _datatable.length; i++) ...[
@@ -336,7 +339,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                             "ItemID": ItemID,
                           },
                         );
-                        dhcontext
+                        dhcontext_autosn
                             .read<ACTUALDATA_Bloc>()
                             .add(ACTUALDATA_Pressed());
                         Navigator.pop(contextin);
@@ -365,7 +368,7 @@ class HEADER extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      controller: controllerReportH,
+      controller: _controllerReportH,
       thumbVisibility: true,
       interactive: true,
       thickness: 10,

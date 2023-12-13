@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'tablebox.dart';
 
-class MasterTable_AUTOPELLING02 extends StatelessWidget {
-  const MasterTable_AUTOPELLING02({super.key});
+class MasterTable_AUTOPEELING02 extends StatelessWidget {
+  const MasterTable_AUTOPEELING02({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -77,20 +77,8 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1(
-                      Head: "02Degressing1/1",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "03Degressing1/2",
+                    rowbox_type1s(
+                      Head: "02AirPressureTank",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -102,43 +90,7 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1s(
-                      Head: "04Shower",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "05Degressing2/1",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "06Degressing2/2",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "07Degressing2/3",
+                      Head: "03WaterRinse4",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -150,7 +102,7 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1s(
-                      Head: "08WaterRinse",
+                      Head: "04WaterRinse3",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -162,7 +114,19 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1s(
-                      Head: "09WaterRinse",
+                      Head: "05WaterRinse2",
+                      text01: "Temp",
+                      text02: "Time",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type1s(
+                      Head: "06WaterRinse1",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -174,7 +138,43 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1(
-                      Head: "10AcidWashing",
+                      Head: "07ElactroCayanide4",
+                      text01: "Temp",
+                      text02: "Time",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type1(
+                      Head: "08ElactroCayanide3",
+                      text01: "Temp",
+                      text02: "Time",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type1(
+                      Head: "09ElactroCayanide2",
+                      text01: "Temp",
+                      text02: "Time",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type1(
+                      Head: "10ElactroCayanide1",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -189,8 +189,8 @@ class MasterTable_AUTOPELLING02 extends StatelessWidget {
   }
 }
 
-class MasterTable_AUTOPELLING02DATA extends StatelessWidget {
-  MasterTable_AUTOPELLING02DATA({
+class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
+  MasterTable_AUTOPEELING02DATA({
     super.key,
     this.NO,
     this.Item,
@@ -424,7 +424,7 @@ class MasterTable_AUTOPELLING02DATA extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1_data(
-                      Head: "10ElactroCayanide4",
+                      Head: "10ElactroCayanide1",
                       text01: Tank10Temp,
                       text02: Tank10Time,
                     ),

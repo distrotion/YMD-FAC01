@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/BlocEvent/LoginEvent.dart';
+import '../../data/global.dart';
 import '../../mainBody.dart';
 // import 'package:tpk_login_arsa_01/script/bloc/login/login_bloc.dart';
 // import 'package:tpk_login_arsa_01/script/bloc/login/login_event.dart';
@@ -32,7 +33,10 @@ class _App_BarState extends State<App_Bar> {
         children: [
           Logo2(),
           Logo1(),
-          Spacer(),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Text("Line : " + namepage(Pagememory)),
+          ),
           //Text(MediaQuery.of(context).size.width.toString()),
           //Text("  |  <--->  |  " + current_page.toString()),
           Spacer(),
@@ -185,4 +189,24 @@ class _Time_State extends State<Time_> {
       },
     );
   }
+}
+
+String namepage(int input) {
+  String output = 'Main Menu';
+
+  if (input == 1) {
+    output = "AUTO SN";
+  } else if (input == 2) {
+    output = "AUTO SN ";
+  } else if (input == 3) {
+    output = "AUTO CU";
+  } else if (input == 4) {
+    output = "AUTO CU";
+  } else if (input == 5) {
+    output = "AUTO PEELING 02";
+  } else if (input == 6) {
+    output = "AUTO PEELING 02";
+  }
+
+  return output;
 }

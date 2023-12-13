@@ -1,6 +1,6 @@
 import 'dart:async';
 
-class Dashboardvar_AUTOSN {
+class Dashboardvar_AUTOCU {
   static bool iscontrol = false;
   static String selectedDate = '';
   static String SetPartName = '';

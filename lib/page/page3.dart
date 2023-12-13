@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '03DASHBOARD_AUTOCU/Dashboardmain_AUTOCU.dart';
 import 'page0.dart';
 import '../data/global.dart';
 
@@ -18,6 +19,6 @@ class Page3Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return DashBoard_AUTOCU();
   }
 }

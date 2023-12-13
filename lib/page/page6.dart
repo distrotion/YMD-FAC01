@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '06Report_AUTOPEELING02/ReportMAIN_AUTOPEELING02.dart';
 import 'page0.dart';
 import '../data/global.dart';
 
@@ -18,6 +19,6 @@ class Page6Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return CsvPicker_AUTOPEELING02();
   }
 }
