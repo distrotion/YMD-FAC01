@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'tablebox.dart';
 
-class MasterTable extends StatelessWidget {
-  const MasterTable({super.key});
+class MasterTable_AUTOSN extends StatelessWidget {
+  const MasterTable_AUTOSN({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -593,8 +593,8 @@ class MasterTable extends StatelessWidget {
   }
 }
 
-class MasterTableDATA extends StatelessWidget {
-  MasterTableDATA({
+class MasterTable_AUTOSNDATA extends StatelessWidget {
+  MasterTable_AUTOSNDATA({
     super.key,
     this.NO,
     this.Item,

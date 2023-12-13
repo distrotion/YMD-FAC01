@@ -8,8 +8,8 @@ import '../../bloc/BlocEvent/02-CsvExportEvent.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../widget/table/exportTable.dart';
-import '../../widget/table/mastertable.dart';
-import 'INDreportVAR.dart';
+import '../../widget/table/MasterTable_AUTOSN.dart';
+import 'ReportVAR_AUTOSN.dart';
 
 DateTime selectedDate = DateTime.now();
 ScrollController _controllerReportH = ScrollController();
@@ -124,14 +124,14 @@ class _CsvPickerState extends State<CsvPicker> {
                   ],
                 ),
               ),
-              MasterTable(),
+              MasterTable_AUTOSN(),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
                       for (int i = 0; i < _datatable.length; i++) ...[
                         //
-                        MasterTableDATA(
+                        MasterTable_AUTOSNDATA(
                           NO: _datatable[i].NO,
                           Item: _datatable[i].Item,
                           PartNO: _datatable[i].PartNO,

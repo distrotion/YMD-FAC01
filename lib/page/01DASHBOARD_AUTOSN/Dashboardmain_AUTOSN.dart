@@ -10,8 +10,8 @@ import '../../bloc/BlocEvent/01-getactualdata.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../widget/common/ComInputText.dart';
-import '../../widget/table/mastertable.dart';
-import 'dashboardvar.dart';
+import '../../widget/table/MasterTable_AUTOSN.dart';
+import 'Dashboardvar_AUTOSN.dart';
 
 late BuildContext dhcontext;
 
@@ -24,7 +24,7 @@ class DashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dhcontext = context;
+    // dhcontext = context;
     return DashBoardBody(
       datatable: datatable,
     );
@@ -51,12 +51,12 @@ class _DashBoardBodyState extends State<DashBoardBody> {
   @override
   void initState() {
     super.initState();
-    dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
-    Timer.periodic(const Duration(seconds: 5), (timmer) {
-      dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    // dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    // Timer.periodic(const Duration(seconds: 5), (timmer) {
+    //   dhcontext.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
 
-      DHtimer = timmer;
-    });
+    //   Dashboardvar_AUTOSN.DHtimer = timmer;
+    // });
 
     //----------
     // timer.cancel();
@@ -64,7 +64,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
 
   @override
   Widget build(BuildContext context) {
-    // dhcontext = context;
+    dhcontext = context;
     Pagememory = 1;
     List<YMDDATAmodel> _datatable = widget.datatable ?? [];
 
@@ -83,17 +83,17 @@ class _DashBoardBodyState extends State<DashBoardBody> {
           scrollDirection: Axis.horizontal,
           child: Column(
             children: [
-              MasterTable(),
+              MasterTable_AUTOSN(),
               Expanded(
                 child: SingleChildScrollView(
                   controller: controllerReportV,
                   // scrollDirection: Axis.horizontal,
                   child: Column(children: [
                     for (int i = 0; i < _datatable.length; i++) ...[
-                      MasterTableDATA(
+                      MasterTable_AUTOSNDATA(
                         SetParName: (v) {
                           print(v);
-                          dashboardvar.SetPartName = '';
+                          Dashboardvar_AUTOSN.SetPartName = '';
                           SetPartName(context, v);
                         },
                         nint: i,
@@ -313,15 +313,15 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                       width: 250,
                       nLimitedChar: 200,
                       height: 40,
-                      isContr: dashboardvar.iscontrol,
+                      isContr: Dashboardvar_AUTOSN.iscontrol,
                       fnContr: (input) {
                         setState(() {
-                          dashboardvar.iscontrol = input;
+                          Dashboardvar_AUTOSN.iscontrol = input;
                         });
                       },
-                      sValue: dashboardvar.SetPartName,
+                      sValue: Dashboardvar_AUTOSN.SetPartName,
                       returnfunc: (String s) {
-                        dashboardvar.SetPartName = s;
+                        Dashboardvar_AUTOSN.SetPartName = s;
                       },
                     ),
                     const SizedBox(
@@ -332,7 +332,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
                         final response = await Dio().post(
                           server + "textpartname",
                           data: {
-                            "PartName": dashboardvar.SetPartName,
+                            "PartName": Dashboardvar_AUTOSN.SetPartName,
                             "ItemID": ItemID,
                           },
                         );
@@ -370,7 +370,7 @@ class HEADER extends StatelessWidget {
       interactive: true,
       thickness: 10,
       radius: const Radius.circular(20),
-      child: MasterTable(),
+      child: MasterTable_AUTOSN(),
     );
   }
 }

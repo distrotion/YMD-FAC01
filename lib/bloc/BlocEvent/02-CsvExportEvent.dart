@@ -12,8 +12,8 @@ import '../../data/datadummy.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../data/test.dart';
-import '../../page/02INDreport/INDreportMAIN.dart';
-import '../../page/02INDreport/INDreportVAR.dart';
+import '../../page/02Report_AUTOSN/ReportMAIN_AUTOSN.dart';
+import '../../page/02Report_AUTOSN/ReportVAR_AUTOSN.dart';
 import '../../page/page2.dart';
 
 //-------------------------------------------------

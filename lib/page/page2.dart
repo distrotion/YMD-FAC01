@@ -9,7 +9,7 @@ import '../data/datadummy.dart';
 import '../data/global.dart';
 import '../data/model.dart';
 import '../widget/table/exportTable.dart';
-import '02INDreport/INDreportMAIN.dart';
+import '02Report_AUTOSN/ReportMAIN_AUTOSN.dart';
 import 'page0.dart';
 import '../data/global.dart';
 

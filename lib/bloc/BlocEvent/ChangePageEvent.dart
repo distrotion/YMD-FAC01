@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/global.dart';
+import '../../page/01DASHBOARD_AUTOSN/dashboardvar_AUTOSN.dart';
 import '../../page/page0.dart';
 import '../../page/page2.dart';
 import '../../widget/menu/mainmenu.dart';
@@ -28,12 +29,12 @@ class ChangePage_Bloc extends Bloc<ChangePage_Event, Widget> {
       CuPage = Page0();
     }
 
-    //   // BlocProvider.of<BlocNotification>(contextGB)
-    //   //     .UpdateNotification("", "Error", enumNotificationlist.Error);
     if (Pagememory == 1) {
-      DHtimer.cancel();
+      // Dashboardvar_AUTOSN.DHtimer.cancel();
     } else if (Pagememory == 3) {
-      JGC_DASHBOARDtimer.cancel();
+      // Dashboardvar_AUTOSN.DHtimer.cancel();
+    } else if (Pagememory == 5) {
+      // Dashboardvar_AUTOSN.DHtimer.cancel();
     }
 
     Navigator.pop(MenuContext);
@@ -41,3 +42,6 @@ class ChangePage_Bloc extends Bloc<ChangePage_Event, Widget> {
     emit(CuPage);
   }
 }
+
+    //   // BlocProvider.of<BlocNotification>(contextGB)
+    //   //     .UpdateNotification("", "Error", enumNotificationlist.Error);

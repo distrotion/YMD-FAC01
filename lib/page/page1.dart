@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/BlocEvent/01-getactualdata.dart';
 import '../bloc/cubit/NotificationEvent.dart';
 import '../data/model.dart';
-import '01DASHBOARD/dashboardmain.dart';
+import '01DASHBOARD_AUTOSN/Dashboardmain_AUTOSN.dart';
 import 'page0.dart';
 import '../data/global.dart';
 
