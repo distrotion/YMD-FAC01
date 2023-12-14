@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/BlocEvent/01-01-getactualdata.dart';
+import '../../bloc/BlocEvent/05-01-getactualdata_AUTOPEELING02.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../data/modelmaster.dart';
@@ -25,7 +25,7 @@ class DashBoard_AUTOPEELING02 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // dhcontext_AUTOPEELING02 = context;
+    dhcontext_AUTOPEELING02 = context;
     return DashBoard_AUTOPEELING02Body(
       datatable: datatable,
     );
@@ -54,9 +54,13 @@ class _DashBoard_AUTOPEELING02BodyState
   @override
   void initState() {
     super.initState();
-    // dhcontext_AUTOPEELING02.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    dhcontext_AUTOPEELING02
+        .read<ACTUALDATA_AUTOPEELING02_Bloc>()
+        .add(ACTUALDATA_AUTOPEELING02_Pressed());
     Timer.periodic(const Duration(seconds: 5), (timmer) {
-      // dhcontext_AUTOPEELING02.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+      dhcontext_AUTOPEELING02
+          .read<ACTUALDATA_AUTOPEELING02_Bloc>()
+          .add(ACTUALDATA_AUTOPEELING02_Pressed());
 
       Dashboardvar_AUTOPEELING02_DHtimer = timmer;
     });
@@ -67,7 +71,7 @@ class _DashBoard_AUTOPEELING02BodyState
 
   @override
   Widget build(BuildContext context) {
-    dhcontext_AUTOPEELING02 = context;
+    // dhcontext_AUTOPEELING02 = context;
     Pagememory = 5;
     List<YMDDATAMASTERmodel> _datatable = widget.datatable ?? [];
 
@@ -206,8 +210,8 @@ class _DashBoard_AUTOPEELING02BodyState
                           },
                         );
                         dhcontext_AUTOPEELING02
-                            .read<ACTUALDATA_Bloc>()
-                            .add(ACTUALDATA_Pressed());
+                            .read<ACTUALDATA_AUTOPEELING02_Bloc>()
+                            .add(ACTUALDATA_AUTOPEELING02_Pressed());
                         Navigator.pop(contextin);
                       },
                       child: Container(

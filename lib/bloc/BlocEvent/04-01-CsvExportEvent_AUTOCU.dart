@@ -15,33 +15,35 @@ import '../../data/modelmaster.dart';
 import '../../data/test.dart';
 import '../../page/02Report_AUTOSN/ReportMAIN_AUTOSN.dart';
 import '../../page/02Report_AUTOSN/ReportVAR_AUTOSN.dart';
+import '../../page/04Report_AUTOCU/ReportVAR_AUTOCU.dart';
 import '../../page/page2.dart';
 
 //-------------------------------------------------
 
 String server = GserverYMD;
-//  INDreportVAR.selectedDate
+//  ReportVAR_AUTOCU.selectedDate
 
-abstract class CsvExport_Event {}
+abstract class CsvExport_AUTOCU_Event {}
 
-class CsvExportGetData extends CsvExport_Event {}
+class CsvExport_AUTOCUGetData extends CsvExport_AUTOCU_Event {}
 
-class CsvExportGetData_R extends CsvExport_Event {}
+class CsvExport_AUTOCUGetData_R extends CsvExport_AUTOCU_Event {}
 
-class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAMASTERmodel>> {
-  CsvExport_Bloc() : super([]) {
-    on<CsvExportGetData>((event, emit) {
-      return _CsvExportGet_Function([], emit);
+class CsvExport_AUTOCU_Bloc
+    extends Bloc<CsvExport_AUTOCU_Event, List<YMDDATAMASTERmodel>> {
+  CsvExport_AUTOCU_Bloc() : super([]) {
+    on<CsvExport_AUTOCUGetData>((event, emit) {
+      return _CsvExport_AUTOCUGet_Function([], emit);
     });
-    on<CsvExportGetData_R>((event, emit) {
-      return _CsvExportGet_Function_R([], emit);
+    on<CsvExport_AUTOCUGetData_R>((event, emit) {
+      return _CsvExport_AUTOCUGet_Function_R([], emit);
     });
   }
-  Future<void> _CsvExportGet_Function(List<YMDDATAMASTERmodel> toAdd,
+  Future<void> _CsvExport_AUTOCUGet_Function(List<YMDDATAMASTERmodel> toAdd,
       Emitter<List<YMDDATAMASTERmodel>> emit) async {
     final response = await Dio().post(
       server + "selectedDate_AUTOCU",
-      data: {"date": INDreportVAR.selectedDate},
+      data: {"date": ReportVAR_AUTOCU.selectedDate},
     );
 
     // final response = await http.post(Uri.parse(server + "getcsvdata"), body: {
@@ -216,11 +218,11 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAMASTERmodel>> {
     emit(output);
   }
 
-  Future<void> _CsvExportGet_Function_R(List<YMDDATAMASTERmodel> toAdd,
+  Future<void> _CsvExport_AUTOCUGet_Function_R(List<YMDDATAMASTERmodel> toAdd,
       Emitter<List<YMDDATAMASTERmodel>> emit) async {
     final response = await Dio().post(
       server + "selectedDate_AUTOCU",
-      data: {"date": INDreportVAR.selectedDate},
+      data: {"date": ReportVAR_AUTOCU.selectedDate},
     );
 
     // final response = await http.post(Uri.parse(server + "getcsvdata"), body: {
@@ -644,7 +646,7 @@ ExpCSV(List<YMDDATAMASTERmodel> data) {
   String datetada = "${selectedDate.toLocal()}".split(' ')[0];
   String csv = const ListToCsvConverter().convert(rows);
   AnchorElement(href: "data:text/plain;charset=utf-8,$csv")
-    ..setAttribute("download", "DATA ${INDreportVAR.selectedDate}.csv")
+    ..setAttribute("download", "DATA ${ReportVAR_AUTOCU.selectedDate}.csv")
     ..click();
 }
 

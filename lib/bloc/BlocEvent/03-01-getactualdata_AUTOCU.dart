@@ -11,13 +11,14 @@ import '../../data/test.dart';
 
 String server = GserverYMD;
 
-abstract class ACTUALDATA_Event {}
+abstract class ACTUALDATA_AUTOCU_Event {}
 
-class ACTUALDATA_Pressed extends ACTUALDATA_Event {}
+class ACTUALDATA_AUTOCU_Pressed extends ACTUALDATA_AUTOCU_Event {}
 
-class ACTUALDATA_Bloc extends Bloc<ACTUALDATA_Event, List<YMDDATAMASTERmodel>> {
-  ACTUALDATA_Bloc() : super([]) {
-    on<ACTUALDATA_Pressed>((event, emit) {
+class ACTUALDATA_AUTOCU_Bloc
+    extends Bloc<ACTUALDATA_AUTOCU_Event, List<YMDDATAMASTERmodel>> {
+  ACTUALDATA_AUTOCU_Bloc() : super([]) {
+    on<ACTUALDATA_AUTOCU_Pressed>((event, emit) {
       return _Function_01([], emit);
     });
   }

@@ -4,7 +4,7 @@ import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/BlocEvent/02-01-CsvExportEvent.dart';
+import '../../bloc/BlocEvent/06-01-CsvExportEvent_AUTOPEELING02.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../data/modelmaster.dart';
@@ -91,8 +91,8 @@ class _CsvPicker_AUTOPEELING02State extends State<CsvPicker_AUTOPEELING02> {
                               if (ReportVAR_AUTOPEELING02.selectedDate != '') {
                                 //
                                 context
-                                    .read<CsvExport_Bloc>()
-                                    .add(CsvExportGetData_R());
+                                    .read<CsvExport_AUTOPEELING02_Bloc>()
+                                    .add(CsvExport_AUTOPEELING02GetData_R());
                               }
                               // final List data = csvdata;
                               // ExpCSV(data);
@@ -116,8 +116,8 @@ class _CsvPicker_AUTOPEELING02State extends State<CsvPicker_AUTOPEELING02> {
                               if (ReportVAR_AUTOPEELING02.selectedDate != '') {
                                 //
                                 context
-                                    .read<CsvExport_Bloc>()
-                                    .add(CsvExportGetData());
+                                    .read<CsvExport_AUTOPEELING02_Bloc>()
+                                    .add(CsvExport_AUTOPEELING02GetData());
                               }
                               // final List data = csvdata;
                               // ExpCSV(data);

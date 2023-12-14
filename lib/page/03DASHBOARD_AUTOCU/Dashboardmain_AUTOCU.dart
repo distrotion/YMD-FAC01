@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/BlocEvent/01-01-getactualdata.dart';
+import '../../bloc/BlocEvent/03-01-getactualdata_AUTOCU.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../data/modelmaster.dart';
@@ -25,7 +25,7 @@ class DashBoard_AUTOCU extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // dhcontext_autocu = context;
+    dhcontext_autocu = context;
     return DashBoard_AUTOCUBody(
       datatable: datatable,
     );
@@ -52,9 +52,13 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
   @override
   void initState() {
     super.initState();
-    // dhcontext_autocu.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+    dhcontext_autocu
+        .read<ACTUALDATA_AUTOCU_Bloc>()
+        .add(ACTUALDATA_AUTOCU_Pressed());
     Timer.periodic(const Duration(seconds: 5), (timmer) {
-      // dhcontext_autocu.read<ACTUALDATA_Bloc>().add(ACTUALDATA_Pressed());
+      dhcontext_autocu
+          .read<ACTUALDATA_AUTOCU_Bloc>()
+          .add(ACTUALDATA_AUTOCU_Pressed());
 
       Dashboardvar_AUTOCU_DHtimer = timmer;
     });
@@ -65,7 +69,7 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
 
   @override
   Widget build(BuildContext context) {
-    dhcontext_autocu = context;
+    // dhcontext_autocu = context;
     Pagememory = 3;
     List<YMDDATAMASTERmodel> _datatable = widget.datatable ?? [];
 
@@ -323,8 +327,8 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
                           },
                         );
                         dhcontext_autocu
-                            .read<ACTUALDATA_Bloc>()
-                            .add(ACTUALDATA_Pressed());
+                            .read<ACTUALDATA_AUTOCU_Bloc>()
+                            .add(ACTUALDATA_AUTOCU_Pressed());
                         Navigator.pop(contextin);
                       },
                       child: Container(

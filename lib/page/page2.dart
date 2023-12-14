@@ -37,8 +37,6 @@ class Page2BodyCSVbloc extends StatelessWidget {
             );
           },
         ));
-
-    ;
   }
 }
 
