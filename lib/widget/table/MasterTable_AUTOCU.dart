@@ -254,7 +254,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 120,
+                width: 200,
                 child: Column(
                   children: [
                     rowbox_type2(
@@ -455,7 +455,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
+                width: 120,
                 child: Column(
                   children: [
                     rowbox_type1s(
@@ -482,7 +482,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 120,
+                width: 200,
                 child: Column(
                   children: [
                     rowbox_type2(
@@ -497,7 +497,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
+                width: 120,
                 child: Column(
                   children: [
                     rowbox_type1s(
@@ -1195,7 +1195,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 120,
+                width: 200,
                 child: Column(
                   children: [
                     rowbox_type2_data(
@@ -1312,7 +1312,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
+                width: 120,
                 child: Column(
                   children: [
                     rowbox_type1_datas(
@@ -1396,7 +1396,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
+                width: 120,
                 child: Column(
                   children: [
                     rowbox_type1_datas(
@@ -1423,7 +1423,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 120,
+                width: 200,
                 child: Column(
                   children: [
                     rowbox_type2_data(
@@ -1438,7 +1438,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
+                width: 120,
                 child: Column(
                   children: [
                     rowbox_type1_datas(
@@ -1465,7 +1465,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 120,
+                width: 200,
                 child: Column(
                   children: [
                     rowbox_type2_data(
@@ -1531,7 +1531,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_datas(
+                    rowbox_type1_data(
                       Head: "42Posteament",
                       text01: Tank42Temp,
                       text02: Tank42Time,
