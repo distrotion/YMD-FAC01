@@ -198,17 +198,17 @@ class _DashBoard_AUTOPEELING02BodyState
                     ),
                     InkWell(
                       onTap: () async {
-                        // final response = await Dio().post(
-                        //   server + "textpartname",
-                        //   data: {
-                        //     "PartName": Dashboardvar_AUTOPEELING02.SetPartName,
-                        //     "ItemID": ItemID,
-                        //   },
-                        // );
-                        // dhcontext_AUTOPEELING02
-                        //     .read<ACTUALDATA_Bloc>()
-                        //     .add(ACTUALDATA_Pressed());
-                        // Navigator.pop(contextin);
+                        final response = await Dio().post(
+                          server + "textpartname_AUTOCU",
+                          data: {
+                            "PartName": Dashboardvar_AUTOPEELING02.SetPartName,
+                            "ItemID": ItemID,
+                          },
+                        );
+                        dhcontext_AUTOPEELING02
+                            .read<ACTUALDATA_Bloc>()
+                            .add(ACTUALDATA_Pressed());
+                        Navigator.pop(contextin);
                       },
                       child: Container(
                         height: 40,

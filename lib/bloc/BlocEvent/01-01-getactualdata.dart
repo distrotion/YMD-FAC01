@@ -22,16 +22,16 @@ class ACTUALDATA_Bloc extends Bloc<ACTUALDATA_Event, List<YMDDATAmodel>> {
   }
   Future<void> _Function_01(
       List<YMDDATAmodel> toAdd, Emitter<List<YMDDATAmodel>> emit) async {
-    // final response = await Dio().post(
-    //   server + "Today",
-    //   data: {},
-    // );
+    final response = await Dio().post(
+      server + "Today",
+      data: {},
+    );
 
     List<YMDDATAmodel> output = [];
-    // if (response.statusCode == 200) {
-    if (true) {
-      // var databuff = response.data;
-      var databuff = testdata;
+    if (response.statusCode == 200) {
+      // if (true) {
+      var databuff = response.data;
+      // var databuff = testdata;
       // print(databuff);
       for (var i = 0; i < databuff.length; i++) {
         //

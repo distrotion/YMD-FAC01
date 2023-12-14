@@ -315,17 +315,17 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
                     ),
                     InkWell(
                       onTap: () async {
-                        // final response = await Dio().post(
-                        //   server + "textpartname",
-                        //   data: {
-                        //     "PartName": Dashboardvar_AUTOCU.SetPartName,
-                        //     "ItemID": ItemID,
-                        //   },
-                        // );
-                        // dhcontext_autocu
-                        //     .read<ACTUALDATA_Bloc>()
-                        //     .add(ACTUALDATA_Pressed());
-                        // Navigator.pop(contextin);
+                        final response = await Dio().post(
+                          server + "textpartname_AUTOCU",
+                          data: {
+                            "PartName": Dashboardvar_AUTOCU.SetPartName,
+                            "ItemID": ItemID,
+                          },
+                        );
+                        dhcontext_autocu
+                            .read<ACTUALDATA_Bloc>()
+                            .add(ACTUALDATA_Pressed());
+                        Navigator.pop(contextin);
                       },
                       child: Container(
                         height: 40,

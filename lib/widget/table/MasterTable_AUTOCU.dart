@@ -102,7 +102,19 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1s(
-                      Head: "04Shower",
+                      Head: "04WaterRinse",
+                      text01: "Temp",
+                      text02: "Time",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type1s(
+                      Head: "05WaterRinse",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -114,7 +126,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1(
-                      Head: "05Degressing2/1",
+                      Head: "06Degressing2/1",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -126,19 +138,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type1(
-                      Head: "06Degressing2/2",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "07Degressing2/3",
+                      Head: "07Degressing2/2",
                       text01: "Temp",
                       text02: "Time",
                     ),
@@ -1053,7 +1053,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "05WaterRinse2",
                       text01: Tank05Temp,
                       text02: Tank05Time,
@@ -1113,7 +1113,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "10Wait",
                       text01: Tank10Temp,
                       text02: Tank10Time,
@@ -1125,7 +1125,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_datas(
+                    rowbox_type1_data(
                       Head: "11ACID WASHING",
                       text01: Tank11Temp,
                       text02: Tank11Time,
@@ -1161,7 +1161,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 200,
                 child: Column(
                   children: [
-                    rowbox_type1_datas(
+                    rowbox_type1_data(
                       Head: "14ACID WASHING",
                       text01: Tank14Temp,
                       text02: Tank14Time,
@@ -1275,7 +1275,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "23WaitState",
                       text01: Tank23Temp,
                       text02: Tank23Time,
@@ -1302,7 +1302,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "25WaterRinse",
                       text01: Tank25Temp,
                       text02: Tank25Time,
@@ -1314,7 +1314,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 200,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "26WaitState",
                       text01: Tank26Temp,
                       text02: Tank26Time,
@@ -1482,7 +1482,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "38WaterRinse",
                       text01: Tank38Temp,
                       text02: Tank38Time,
@@ -1494,7 +1494,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_data(
+                    rowbox_type1_datas(
                       Head: "39WaitState",
                       text01: Tank39Temp,
                       text02: Tank39Time,
