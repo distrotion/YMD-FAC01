@@ -38,6 +38,16 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
+                      Head: "ItemNO",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0(
                       Head: "Part NO.",
                     ),
                   ],
@@ -647,6 +657,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
     super.key,
     this.NO,
     this.Item,
+    this.ItemNO,
     this.PartNO,
     this.PartName,
     this.QTY,
@@ -793,6 +804,7 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
   });
   String? NO;
   String? Item;
+  String? ItemNO;
   String? PartNO;
   String? PartName;
   String? QTY;
@@ -963,6 +975,16 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                   children: [
                     rowbox_type0_data(
                       Head: Item,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0_data(
+                      Head: ItemNO,
                     ),
                   ],
                 ),

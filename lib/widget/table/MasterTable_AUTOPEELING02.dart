@@ -38,6 +38,16 @@ class MasterTable_AUTOPEELING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
+                      Head: "ItemNO",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0(
                       Head: "Part NO.",
                     ),
                   ],
@@ -194,6 +204,7 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
     super.key,
     this.NO,
     this.Item,
+    this.ItemNO,
     this.PartNO,
     this.PartName,
     this.QTY,
@@ -221,6 +232,7 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
   });
   String? NO;
   String? Item;
+  String? ItemNO;
   String? PartNO;
   String? PartName;
   String? QTY;
@@ -272,6 +284,16 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
                   children: [
                     rowbox_type0_data(
                       Head: Item,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0_data(
+                      Head: ItemNO,
                     ),
                   ],
                 ),
@@ -399,7 +421,7 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_datas(
+                    rowbox_type1_data(
                       Head: "08ElactroCayanide3",
                       text01: Tank08Temp,
                       text02: Tank08Time,
@@ -411,7 +433,7 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
                 width: 120,
                 child: Column(
                   children: [
-                    rowbox_type1_datas(
+                    rowbox_type1_data(
                       Head: "09ElactroCayanide2",
                       text01: Tank09Temp,
                       text02: Tank09Time,

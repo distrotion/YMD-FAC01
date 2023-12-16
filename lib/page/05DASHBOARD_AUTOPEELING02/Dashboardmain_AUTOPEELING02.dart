@@ -110,6 +110,7 @@ class _DashBoard_AUTOPEELING02BodyState
                         nint: i,
                         NO: _datatable[i].NO,
                         Item: _datatable[i].Item,
+                        Item: _datatable[i].Item,
                         PartNO: _datatable[i].PartNO,
                         PartName: _datatable[i].PartName,
                         QTY: _datatable[i].QTY,

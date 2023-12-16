@@ -108,6 +108,7 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
                         nint: i,
                         NO: _datatable[i].NO,
                         Item: _datatable[i].Item,
+                        ItemNO: _datatable[i].ItemNO,
                         PartNO: _datatable[i].PartNO,
                         PartName: _datatable[i].PartName,
                         QTY: _datatable[i].QTY,

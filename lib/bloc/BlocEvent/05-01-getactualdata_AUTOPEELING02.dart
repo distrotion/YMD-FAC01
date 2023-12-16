@@ -40,6 +40,7 @@ class ACTUALDATA_AUTOPEELING02_Bloc
         output.add(YMDDATAMASTERmodel(
           NO: '${i + 1}',
           Item: _NullCheck(databuff[i]['ItemID']),
+          ItemNO: _NullCheck(databuff[i]['ItemNO']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
           QTY: _NullCheck(databuff[i]['QTY']),

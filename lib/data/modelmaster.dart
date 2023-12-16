@@ -2,6 +2,7 @@ class YMDDATAMASTERmodel {
   YMDDATAMASTERmodel({
     this.NO = '',
     this.Item = '',
+    this.ItemNO = '',
     this.PartNO = '',
     this.PartName = '',
     this.QTY = '',
@@ -146,6 +147,7 @@ class YMDDATAMASTERmodel {
   });
   String NO;
   String Item;
+  String ItemNO;
   String PartNO;
   String PartName;
   String QTY;

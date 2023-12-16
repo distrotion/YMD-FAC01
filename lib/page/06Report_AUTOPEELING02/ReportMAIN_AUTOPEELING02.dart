@@ -138,6 +138,7 @@ class _CsvPicker_AUTOPEELING02State extends State<CsvPicker_AUTOPEELING02> {
                           nint: i,
                           NO: _datatable[i].NO,
                           Item: _datatable[i].Item,
+                          ItemNO: _datatable[i].ItemNO,
                           PartNO: _datatable[i].PartNO,
                           PartName: _datatable[i].PartName,
                           QTY: _datatable[i].QTY,

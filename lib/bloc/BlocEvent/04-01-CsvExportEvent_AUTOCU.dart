@@ -64,6 +64,7 @@ class CsvExport_AUTOCU_Bloc
         output.add(YMDDATAMASTERmodel(
           NO: '${i + 1}',
           Item: _NullCheck(databuff[i]['ItemID']),
+          ItemNO: _NullCheck(databuff[i]['ItemNO']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
           QTY: _NullCheck(databuff[i]['QTY']),
@@ -244,6 +245,7 @@ class CsvExport_AUTOCU_Bloc
         output.add(YMDDATAMASTERmodel(
           NO: '${i + 1}',
           Item: _NullCheck(databuff[i]['ItemID']),
+          ItemNO: _NullCheck(databuff[i]['ItemNO']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
           QTY: _NullCheck(databuff[i]['QTY']),
@@ -417,7 +419,8 @@ ExpCSV(List<YMDDATAMASTERmodel> data) {
     if (i == -1) {
       row.add('NO');
       row.add('Item');
-      row.add('PartNO No');
+      row.add('ItemNO');
+      row.add('PartNO');
       row.add('PartName');
       row.add('QTY');
       row.add('LoadingTime01');
@@ -517,6 +520,7 @@ ExpCSV(List<YMDDATAMASTERmodel> data) {
     } else {
       row.add(data[i].NO);
       row.add(data[i].Item);
+      row.add(data[i].ItemNO);
       row.add(data[i].PartNO);
       row.add(data[i].PartName);
       row.add(data[i].QTY);
