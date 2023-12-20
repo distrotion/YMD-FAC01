@@ -321,6 +321,7 @@ class YMDDATAmodel {
     this.Item = '',
     this.PartNO = '',
     this.PartName = '',
+    this.QTY = '',
     this.LoadingTime01 = '',
     this.Degressing02Temp = '',
     this.Degressing02Time = '',
@@ -449,6 +450,7 @@ class YMDDATAmodel {
   String Item;
   String PartNO;
   String PartName;
+  String QTY;
   String LoadingTime01;
   String Degressing02Temp;
   String Degressing02Time;

@@ -58,6 +58,16 @@ class MasterTable_AUTOSN extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
+                      Head: "QTY",
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0(
                       Head: "01LoadingTime",
                     ),
                   ],
@@ -600,6 +610,7 @@ class MasterTable_AUTOSNDATA extends StatelessWidget {
     this.Item,
     this.PartNO,
     this.PartName,
+    this.QTY,
     this.LoadingTime01,
     this.Degressing02Temp,
     this.Degressing02Time,
@@ -731,6 +742,7 @@ class MasterTable_AUTOSNDATA extends StatelessWidget {
   String? Item;
   String? PartNO;
   String? PartName;
+  String? QTY;
   String? LoadingTime01;
   String? Degressing02Temp;
   String? Degressing02Time;
@@ -929,6 +941,16 @@ class MasterTable_AUTOSNDATA extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+              SizedBox(
+                width: 120,
+                child: Column(
+                  children: [
+                    rowbox_type0_data(
+                      Head: QTY,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(

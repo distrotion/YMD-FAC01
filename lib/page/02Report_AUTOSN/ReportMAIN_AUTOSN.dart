@@ -1,6 +1,10 @@
+import 'dart:convert';
 import 'dart:html';
+import 'dart:typed_data';
 
 import 'package:csv/csv.dart';
+import 'package:dio/dio.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -121,6 +125,50 @@ class _CsvPicker_AUTOSNState extends State<CsvPicker_AUTOSN> {
                             });
                           }),
                     ),
+                    Container(
+                      color: Colors.orange,
+                      height: 50,
+                      width: 150,
+                      child: InkWell(
+                          child: const Center(
+                            child: Text(
+                              "Import Name&Qty",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                          onTap: () async {
+                            var picked = await FilePicker.platform.pickFiles(
+                              type: FileType.custom,
+                              allowedExtensions: ['csv'],
+                            );
+                            Uint8List? datacsv;
+
+                            if (picked != null) {
+                              datacsv = picked.files.first.bytes;
+                              const asciiDecoder = AsciiDecoder();
+                              final result =
+                                  asciiDecoder.convert(datacsv!.toList());
+                              final response = await Dio().post(
+                                server + "PNQTYupload_AUTOSN",
+                                data: {
+                                  "rawcsv": result,
+                                },
+                              ).then((value) {
+                                setState(() {
+                                  print(INDreportVAR.selectedDate);
+                                  if (INDreportVAR.selectedDate != '') {
+                                    //
+                                    context
+                                        .read<CsvExport_Bloc>()
+                                        .add(CsvExportGetData_R());
+                                  }
+                                  // final List data = csvdata;
+                                  // ExpCSV(data);
+                                });
+                              });
+                            }
+                          }),
+                    ),
                   ],
                 ),
               ),
@@ -136,6 +184,7 @@ class _CsvPicker_AUTOSNState extends State<CsvPicker_AUTOSN> {
                           Item: _datatable[i].Item,
                           PartNO: _datatable[i].PartNO,
                           PartName: _datatable[i].PartName,
+                          QTY: _datatable[i].QTY,
                           LoadingTime01: _datatable[i].LoadingTime01,
                           Degressing02Temp: _datatable[i].Degressing02Temp,
                           Degressing02Time: _datatable[i].Degressing02Time,

@@ -1,6 +1,10 @@
+import 'dart:convert';
 import 'dart:html';
+import 'dart:typed_data';
 
 import 'package:csv/csv.dart';
+import 'package:dio/dio.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -122,6 +126,51 @@ class _CsvPicker_AUTOPEELING02State extends State<CsvPicker_AUTOPEELING02> {
                               // final List data = csvdata;
                               // ExpCSV(data);
                             });
+                          }),
+                    ),
+                    Container(
+                      color: Colors.orange,
+                      height: 50,
+                      width: 150,
+                      child: InkWell(
+                          child: const Center(
+                            child: Text(
+                              "Import Name&Qty",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                          onTap: () async {
+                            var picked = await FilePicker.platform.pickFiles(
+                              type: FileType.custom,
+                              allowedExtensions: ['csv'],
+                            );
+                            Uint8List? datacsv;
+
+                            if (picked != null) {
+                              datacsv = picked.files.first.bytes;
+                              const asciiDecoder = AsciiDecoder();
+                              final result =
+                                  asciiDecoder.convert(datacsv!.toList());
+                              final response = await Dio().post(
+                                server + "PNQTYupload_AUTOPL2",
+                                data: {
+                                  "rawcsv": result,
+                                },
+                              ).then((value) {
+                                setState(() {
+                                  print(ReportVAR_AUTOPEELING02.selectedDate);
+                                  if (ReportVAR_AUTOPEELING02.selectedDate !=
+                                      '') {
+                                    //
+                                    context
+                                        .read<CsvExport_AUTOPEELING02_Bloc>()
+                                        .add(CsvExport_AUTOPEELING02GetData());
+                                  }
+                                  // final List data = csvdata;
+                                  // ExpCSV(data);
+                                });
+                              });
+                            }
                           }),
                     ),
                   ],

@@ -63,6 +63,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
+          QTY: _NullCheck(databuff[i]['QTY']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
@@ -251,6 +252,7 @@ class CsvExport_Bloc extends Bloc<CsvExport_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
+          QTY: _NullCheck(databuff[i]['QTY']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
@@ -432,6 +434,7 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add('Item');
       row.add('PartNO No');
       row.add('PartName');
+      row.add('QTY');
       row.add('LoadingTime01');
       row.add('Degressing02Temp');
       row.add('Degressing02Time');
@@ -561,6 +564,7 @@ ExpCSV(List<YMDDATAmodel> data) {
       row.add(data[i].Item);
       row.add(data[i].PartNO);
       row.add(data[i].PartName);
+      row.add(data[i].QTY);
       row.add((data[i].LoadingTime01));
       row.add(data[i].Degressing02Temp);
       row.add(data[i].Degressing02Time);

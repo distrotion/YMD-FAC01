@@ -104,6 +104,7 @@ class _DashBoard_AUTOSNBodyState extends State<DashBoard_AUTOSNBody> {
                         Item: _datatable[i].Item,
                         PartNO: _datatable[i].PartNO,
                         PartName: _datatable[i].PartName,
+                        QTY: _datatable[i].QTY,
                         LoadingTime01: _datatable[i].LoadingTime01,
                         Degressing02Temp: _datatable[i].Degressing02Temp,
                         Degressing02Time: _datatable[i].Degressing02Time,

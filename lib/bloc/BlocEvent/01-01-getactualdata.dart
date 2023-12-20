@@ -40,6 +40,7 @@ class ACTUALDATA_Bloc extends Bloc<ACTUALDATA_Event, List<YMDDATAmodel>> {
           Item: _NullCheck(databuff[i]['ItemID']),
           PartNO: _NullCheck(databuff[i]['PartNumber']),
           PartName: _NullCheck(databuff[i]['PartName']),
+          QTY: _NullCheck(databuff[i]['QTY']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
           Degressing02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Degressing02Time: _NullCheck(databuff[i]['State02timePV']),
