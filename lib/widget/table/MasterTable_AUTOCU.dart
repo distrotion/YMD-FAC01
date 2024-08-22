@@ -23,12 +23,22 @@ class MasterTable_AUTOCU extends StatelessWidget {
                   ],
                 ),
               ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0(
+              //         Head: "Item",
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Item",
+                      Head: "Bar no.",
                     ),
                   ],
                 ),
@@ -38,7 +48,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "ItemNO",
+                      Head: "Program no..",
                     ),
                   ],
                 ),
@@ -48,17 +58,7 @@ class MasterTable_AUTOCU extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Part NO.",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0(
-                      Head: "Part Name",
+                      Head: "Part no.",
                     ),
                   ],
                 ),
@@ -83,18 +83,18 @@ class MasterTable_AUTOCU extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "02Degressing1/1",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type1(
+              //         Head: "02Degressing1/1",
+              //         text01: "Temp",
+              //         text02: "Time",
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
@@ -131,18 +131,18 @@ class MasterTable_AUTOCU extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1(
-                      Head: "06Degressing2/1",
-                      text01: "Temp",
-                      text02: "Time",
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type1(
+              //         Head: "06Degressing2/1",
+              //         text01: "Temp",
+              //         text02: "Time",
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
@@ -969,16 +969,16 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0_data(
-                      Head: Item,
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0_data(
+              //         Head: Item,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
@@ -1036,18 +1036,18 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1_data(
-                      Head: "02Degressing1/1",
-                      text01: Tank02Temp,
-                      text02: Tank02Time,
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type1_data(
+              //         Head: "02Degressing1/1",
+              //         text01: Tank02Temp,
+              //         text02: Tank02Time,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
@@ -1084,18 +1084,18 @@ class MasterTable_AUTOCUDATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type1_data(
-                      Head: "06Degressing2/1",
-                      text01: Tank06Temp,
-                      text02: Tank06Time,
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type1_data(
+              //         Head: "06Degressing2/1",
+              //         text01: Tank06Temp,
+              //         text02: Tank06Time,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(

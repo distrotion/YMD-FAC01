@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:intl/intl.dart';
 
+import '../../data/dummy2.dart';
 import '../../data/global.dart';
 import '../../data/model.dart';
 import '../../data/modelmaster.dart';
@@ -33,9 +34,13 @@ class ACTUALDATA_AUTOCU_Bloc
     if (response.statusCode == 200) {
       // if (true) {
       var databuff = response.data;
-      // var databuff = testdata;
+      // var databuff = testdummy;
       // print(databuff);
-      for (var i = 0; i < databuff.length; i++) {
+      int numtest = databuff.length;
+      if (databuff.length > 50) {
+        numtest = 50;
+      }
+      for (var i = 0; i < numtest; i++) {
         //
         output.add(YMDDATAMASTERmodel(
           NO: '${i + 1}',
@@ -77,8 +82,8 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank16Time: _NullCheck(databuff[i]['State16timePV']),
           Tank16Temp: todesimol(_NullCheck(databuff[i]['State16tempPV'])),
           //
-          Tank17Volt: todesimol(_NullCheck(databuff[i]['State17voltPV'])),
-          Tank17Amp: _NullCheck(databuff[i]['State17amPV']),
+          Tank17Amp: (_NullCheck(databuff[i]['State17voltPV'])),
+          Tank17Volt: todesimol(_NullCheck(databuff[i]['State17amPV'])),
           Tank17Temp: todesimol(_NullCheck(databuff[i]['State17tempPV'])),
           Tank17Rpm: _NullCheck(databuff[i]['State17rpmPV']),
           Tank17Time: _NullCheck(databuff[i]['State17timePV']),
@@ -88,8 +93,8 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank19Time: _NullCheck(databuff[i]['State19timePV']),
           Tank19Temp: todesimol(_NullCheck(databuff[i]['State19tempPV'])),
           //
-          Tank20Volt: todesimol(_NullCheck(databuff[i]['State20voltPV'])),
-          Tank20Amp: _NullCheck(databuff[i]['State20amPV']),
+          Tank20Amp: (_NullCheck(databuff[i]['State20voltPV'])),
+          Tank20Volt: todesimol(_NullCheck(databuff[i]['State20amPV'])),
           Tank20Temp: todesimol(_NullCheck(databuff[i]['State20tempPV'])),
           Tank20Rpm: _NullCheck(databuff[i]['State20rpmPV']),
           Tank20Time: _NullCheck(databuff[i]['State20timePV']),
@@ -101,8 +106,8 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank23Time: _NullCheck(databuff[i]['State23timePV']),
           Tank23Temp: todesimol(_NullCheck(databuff[i]['State23tempPV'])),
           //
-          Tank24Volt: todesimol(_NullCheck(databuff[i]['State24voltPV'])),
-          Tank24Amp: _NullCheck(databuff[i]['State24amPV']),
+          Tank24Amp: (_NullCheck(databuff[i]['State24voltPV'])),
+          Tank24Volt: todesimol(_NullCheck(databuff[i]['State24amPV'])),
           Tank24Temp: todesimol(_NullCheck(databuff[i]['State24tempPV'])),
           Tank24Rpm: _NullCheck(databuff[i]['State24rpmPV']),
           Tank24Time: _NullCheck(databuff[i]['State24timePV']),
@@ -112,14 +117,14 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank26Time: _NullCheck(databuff[i]['State26timePV']),
           Tank26Temp: todesimol(_NullCheck(databuff[i]['State26tempPV'])),
           //
-          Tank27Volt: todesimol(_NullCheck(databuff[i]['State27voltPV'])),
-          Tank27Amp: _NullCheck(databuff[i]['State27amPV']),
+          Tank27Amp: (_NullCheck(databuff[i]['State27voltPV'])),
+          Tank27Volt: todesimol(_NullCheck(databuff[i]['State27amPV'])),
           Tank27Temp: todesimol(_NullCheck(databuff[i]['State27tempPV'])),
           Tank27Rpm: _NullCheck(databuff[i]['State27rpmPV']),
           Tank27Time: _NullCheck(databuff[i]['State27timePV']),
 
-          Tank28Volt: todesimol(_NullCheck(databuff[i]['State28voltPV'])),
-          Tank28Amp: _NullCheck(databuff[i]['State28amPV']),
+          Tank28Amp: (_NullCheck(databuff[i]['State28voltPV'])),
+          Tank28Volt: todesimol(_NullCheck(databuff[i]['State28amPV'])),
           Tank28Temp: todesimol(_NullCheck(databuff[i]['State28tempPV'])),
           Tank28Rpm: _NullCheck(databuff[i]['State28rpmPV']),
           Tank28Time: _NullCheck(databuff[i]['State28timePV']),
@@ -127,14 +132,14 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank29Time: _NullCheck(databuff[i]['State29timePV']),
           Tank29Temp: todesimol(_NullCheck(databuff[i]['State29tempPV'])),
           //
-          Tank30Volt: todesimol(_NullCheck(databuff[i]['State30voltPV'])),
-          Tank30Amp: _NullCheck(databuff[i]['State30amPV']),
+          Tank30Amp: (_NullCheck(databuff[i]['State30voltPV'])),
+          Tank30Volt: todesimol(_NullCheck(databuff[i]['State30amPV'])),
           Tank30Temp: todesimol(_NullCheck(databuff[i]['State30tempPV'])),
           Tank30Rpm: _NullCheck(databuff[i]['State30rpmPV']),
           Tank30Time: _NullCheck(databuff[i]['State30timePV']),
 
-          Tank31Volt: todesimol(_NullCheck(databuff[i]['State31voltPV'])),
-          Tank31Amp: _NullCheck(databuff[i]['State31amPV']),
+          Tank31Amp: (_NullCheck(databuff[i]['State31voltPV'])),
+          Tank31Volt: todesimol(_NullCheck(databuff[i]['State31amPV'])),
           Tank31Temp: todesimol(_NullCheck(databuff[i]['State31tempPV'])),
           Tank31Rpm: _NullCheck(databuff[i]['State31rpmPV']),
           Tank31Time: _NullCheck(databuff[i]['State31timePV']),
@@ -142,14 +147,14 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank32Time: _NullCheck(databuff[i]['State32timePV']),
           Tank32Temp: todesimol(_NullCheck(databuff[i]['State32tempPV'])),
           //
-          Tank33Volt: todesimol(_NullCheck(databuff[i]['State33voltPV'])),
-          Tank33Amp: _NullCheck(databuff[i]['State33amPV']),
+          Tank33Amp: (_NullCheck(databuff[i]['State33voltPV'])),
+          Tank33Volt: todesimol(_NullCheck(databuff[i]['State33amPV'])),
           Tank33Temp: todesimol(_NullCheck(databuff[i]['State33tempPV'])),
           Tank33Rpm: _NullCheck(databuff[i]['State33rpmPV']),
           Tank33Time: _NullCheck(databuff[i]['State33timePV']),
 
-          Tank34Volt: todesimol(_NullCheck(databuff[i]['State34voltPV'])),
-          Tank34Amp: _NullCheck(databuff[i]['State34amPV']),
+          Tank34Amp: (_NullCheck(databuff[i]['State34voltPV'])),
+          Tank34Volt: todesimol(_NullCheck(databuff[i]['State34amPV'])),
           Tank34Temp: todesimol(_NullCheck(databuff[i]['State34tempPV'])),
           Tank34Rpm: _NullCheck(databuff[i]['State34rpmPV']),
           Tank34Time: _NullCheck(databuff[i]['State34timePV']),
@@ -157,14 +162,14 @@ class ACTUALDATA_AUTOCU_Bloc
           Tank35Time: _NullCheck(databuff[i]['State35timePV']),
           Tank35Temp: todesimol(_NullCheck(databuff[i]['State35tempPV'])),
           //
-          Tank36Volt: todesimol(_NullCheck(databuff[i]['State36voltPV'])),
-          Tank36Amp: _NullCheck(databuff[i]['State36amPV']),
+          Tank36Amp: (_NullCheck(databuff[i]['State36voltPV'])),
+          Tank36Volt: todesimol(_NullCheck(databuff[i]['State36amPV'])),
           Tank36Temp: todesimol(_NullCheck(databuff[i]['State36tempPV'])),
           Tank36Rpm: _NullCheck(databuff[i]['State36rpmPV']),
           Tank36Time: _NullCheck(databuff[i]['State36timePV']),
 
-          Tank37Volt: todesimol(_NullCheck(databuff[i]['State37voltPV'])),
-          Tank37Amp: _NullCheck(databuff[i]['State37amPV']),
+          Tank37Amp: (_NullCheck(databuff[i]['State37voltPV'])),
+          Tank37Volt: todesimol(_NullCheck(databuff[i]['State37amPV'])),
           Tank37Temp: todesimol(_NullCheck(databuff[i]['State37tempPV'])),
           Tank37Rpm: _NullCheck(databuff[i]['State37rpmPV']),
           Tank37Time: _NullCheck(databuff[i]['State37timePV']),

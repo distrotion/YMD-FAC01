@@ -23,12 +23,22 @@ class MasterTable_AUTOSN extends StatelessWidget {
                   ],
                 ),
               ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0(
+              //         Head: "Item",
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Item",
+                      Head: "Bar no.",
                     ),
                   ],
                 ),
@@ -38,17 +48,7 @@ class MasterTable_AUTOSN extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Part NO.",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0(
-                      Head: "Part Name",
+                      Head: "Program no.",
                     ),
                   ],
                 ),
@@ -906,16 +906,16 @@ class MasterTable_AUTOSNDATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0_data(
-                      Head: Item,
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0_data(
+              //         Head: Item,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(

@@ -23,12 +23,22 @@ class MasterTable_AUTOPEELING02 extends StatelessWidget {
                   ],
                 ),
               ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0(
+              //         Head: "Item",
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Item",
+                      Head: "Bar no.",
                     ),
                   ],
                 ),
@@ -38,7 +48,7 @@ class MasterTable_AUTOPEELING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "ItemNO",
+                      Head: "Program no.",
                     ),
                   ],
                 ),
@@ -48,17 +58,7 @@ class MasterTable_AUTOPEELING02 extends StatelessWidget {
                 child: Column(
                   children: [
                     rowbox_type0(
-                      Head: "Part NO.",
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0(
-                      Head: "Part Name",
+                      Head: "Part no.",
                     ),
                   ],
                 ),
@@ -278,16 +278,16 @@ class MasterTable_AUTOPEELING02DATA extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 120,
-                child: Column(
-                  children: [
-                    rowbox_type0_data(
-                      Head: Item,
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: Column(
+              //     children: [
+              //       rowbox_type0_data(
+              //         Head: Item,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 width: 120,
                 child: Column(
