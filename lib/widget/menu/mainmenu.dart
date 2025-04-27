@@ -15,6 +15,7 @@ late BuildContext MenuContext;
 bool menu_AOTOSN01 = false;
 bool menu_AUTOCU01 = false;
 bool menu_AUTOPL02 = false;
+bool menu_AUTGAMA = false;
 
 class MainMenu extends StatefulWidget {
   MainMenu({Key? key}) : super(key: key);
@@ -268,6 +269,67 @@ class _Data_Menu_mainmenuState extends State<Data_Menu_mainmenu> {
             menu_normal(
               name: "Report",
               page: Page6(),
+            ),
+          ],
+
+          InkWell(
+            onTap: () {
+              setState(() {
+                if (menu_AUTGAMA) {
+                  menu_AUTGAMA = false;
+                } else {
+                  menu_AUTGAMA = true;
+                }
+              });
+            },
+            child: SizedBox(
+              height: 50,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          right: 6.0, left: 6, top: 4.0, bottom: 4.0),
+                      child: Container(
+                        height: 24,
+                        width: 24,
+                        child: Icon(
+                          menu_AUTGAMA
+                              ? Icons.arrow_drop_up_outlined
+                              : Icons.arrow_drop_down_outlined,
+                          color: Colors.white,
+                        ),
+                        // decoration: BoxDecoration(
+                        //     image: DecorationImage(
+                        //         image: AssetImage(getShowHidePassword_ImgPath()),
+                        //         fit: BoxFit.fitHeight))
+                      ),
+                    ),
+                    const Text(
+                      "AUTO GAMA",
+                      style: TextStyle(
+                        fontFamily: 'Mitr',
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.normal,
+                        letterSpacing: 0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          if (menu_AUTGAMA) ...[
+            menu_normal(
+              name: "DASHBOARD",
+              page: Page7(),
+            ),
+            menu_normal(
+              name: "Report",
+              page: Page8(),
             ),
           ],
 

@@ -46,6 +46,11 @@ class ChangePage_Bloc extends Bloc<ChangePage_Event, Widget> {
         Dashboardvar_AUTOPEELING02_DHtimer.cancel();
       });
     }
+    // else if (Pagememory == 7) {
+    //   Future.delayed(const Duration(milliseconds: 1000), () {
+    //     Dashboardvar_AUTOGAMA_DHtimer.cancel();
+    //   });
+    // }
 
     Navigator.pop(MenuContext);
 
