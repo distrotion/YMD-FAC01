@@ -9,7 +9,7 @@ class Page0 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Page7();
+    return Page0Body();
   }
 }
 
@@ -22,9 +22,16 @@ class Page0Body extends StatelessWidget {
       child: Container(
           height: 100,
           width: 200,
-          color: Colors.orange,
-          child: const Center(
-              child: Text("initial Page \nor do something wrong"))),
+          // color: Colors.orange,
+          // child:
+          //     const Center(child: Text("initial Page \nor do something wrong")),
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage("assets/images/logo_tpk.png"),
+              fit: BoxFit.fitWidth,
+            ),
+          )),
     );
   }
 }

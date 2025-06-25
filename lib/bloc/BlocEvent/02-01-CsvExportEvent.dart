@@ -18,7 +18,7 @@ import '../../page/page2.dart';
 
 //-------------------------------------------------
 
-String server = GserverYMD;
+String server = GserverYMD1;
 //  INDreportVAR.selectedDate
 
 abstract class CsvExport_Event {}

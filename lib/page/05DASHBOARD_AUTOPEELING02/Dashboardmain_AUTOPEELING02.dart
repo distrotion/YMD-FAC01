@@ -70,6 +70,12 @@ class _DashBoard_AUTOPEELING02BodyState
   }
 
   @override
+  void dispose() {
+    Dashboardvar_AUTOPEELING02_DHtimer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // dhcontext_AUTOPEELING02 = context;
     Pagememory = 5;

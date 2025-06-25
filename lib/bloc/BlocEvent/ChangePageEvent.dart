@@ -33,19 +33,19 @@ class ChangePage_Bloc extends Bloc<ChangePage_Event, Widget> {
 
     print(Pagememory);
 
-    if (Pagememory == 1) {
-      Future.delayed(const Duration(milliseconds: 1000), () {
-        Dashboardvar_AUTOSN_DHtimer.cancel();
-      });
-    } else if (Pagememory == 3) {
-      Future.delayed(const Duration(milliseconds: 1000), () {
-        Dashboardvar_AUTOCU_DHtimer.cancel();
-      });
-    } else if (Pagememory == 5) {
-      Future.delayed(const Duration(milliseconds: 1000), () {
-        Dashboardvar_AUTOPEELING02_DHtimer.cancel();
-      });
-    }
+    // if (Pagememory == 1) {
+    //   Future.delayed(const Duration(milliseconds: 1000), () {
+    //     Dashboardvar_AUTOSN_DHtimer.cancel();
+    //   });
+    // } else if (Pagememory == 3) {
+    //   Future.delayed(const Duration(milliseconds: 1000), () {
+    //     Dashboardvar_AUTOCU_DHtimer.cancel();
+    //   });
+    // } else if (Pagememory == 5) {
+    //   Future.delayed(const Duration(milliseconds: 1000), () {
+    //     Dashboardvar_AUTOPEELING02_DHtimer.cancel();
+    //   });
+    // }
     // else if (Pagememory == 7) {
     //   Future.delayed(const Duration(milliseconds: 1000), () {
     //     Dashboardvar_AUTOGAMA_DHtimer.cancel();

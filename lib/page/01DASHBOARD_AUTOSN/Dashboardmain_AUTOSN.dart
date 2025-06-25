@@ -63,6 +63,12 @@ class _DashBoard_AUTOSNBodyState extends State<DashBoard_AUTOSNBody> {
   }
 
   @override
+  void dispose() {
+    Dashboardvar_AUTOSN_DHtimer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // dhcontext_autosn = context;
     Pagememory = 1;

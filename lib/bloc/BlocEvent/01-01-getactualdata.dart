@@ -8,7 +8,7 @@ import '../../data/test.dart';
 
 //-------------------------------------------------
 
-String server = GserverYMD;
+String server = GserverYMD1;
 
 abstract class ACTUALDATA_Event {}
 

@@ -24,7 +24,8 @@ class PageLevel {
 
 // String GserverYMD = 'http://192.168.71.102:1885/';
 // String GserverYMD = 'http://192.168.1.148:1885/';
-String GserverYMD = 'http://192.168.1.157:1885/';
+String GserverYMD1 = 'http://127.0.0.1:1885/';
+String GserverYMD2 = 'http://127.0.0.1:1885/';
 // String GserverYMD = 'http://192.168.1.147:1885/';
 
 //

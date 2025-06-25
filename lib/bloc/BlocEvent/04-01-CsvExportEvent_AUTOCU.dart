@@ -20,7 +20,7 @@ import '../../page/page2.dart';
 
 //-------------------------------------------------
 
-String server = GserverYMD;
+String server = GserverYMD2;
 //  ReportVAR_AUTOCU.selectedDate
 
 abstract class CsvExport_AUTOCU_Event {}
@@ -250,9 +250,9 @@ class CsvExport_AUTOCU_Bloc
           PartName: _NullCheck(databuff[i]['PartName']),
           QTY: _NullCheck(databuff[i]['QTY']),
           LoadingTime01: _daycon(_NullCheck(databuff[i]['LoadingTime'])),
+
           Tank02Temp: todesimol(_NullCheck(databuff[i]['State02tempPV'])),
           Tank02Time: _NullCheck(databuff[i]['State02timePV']),
-
           Tank03Time: _NullCheck(databuff[i]['State03timePV']),
           Tank03Temp: todesimol(_NullCheck(databuff[i]['State03tempPV'])),
           Tank04Time: _NullCheck(databuff[i]['State04timePV']),

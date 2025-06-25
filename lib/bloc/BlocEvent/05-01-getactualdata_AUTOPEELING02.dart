@@ -9,7 +9,7 @@ import '../../data/test.dart';
 
 //-------------------------------------------------
 
-String server = GserverYMD;
+String server = GserverYMD2;
 
 abstract class ACTUALDATA_AUTOPEELING02_Event {}
 

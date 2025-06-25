@@ -20,7 +20,7 @@ import '../../page/page2.dart';
 
 //-------------------------------------------------
 
-String server = GserverYMD;
+String server = GserverYMD2;
 //  ReportVAR_AUTOPEELING02.selectedDate
 
 abstract class CsvExport_AUTOPEELING02_Event {}

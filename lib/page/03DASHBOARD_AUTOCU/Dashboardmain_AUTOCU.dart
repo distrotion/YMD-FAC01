@@ -68,6 +68,12 @@ class _DashBoard_AUTOCUBodyState extends State<DashBoard_AUTOCUBody> {
   }
 
   @override
+  void dispose() {
+    Dashboardvar_AUTOCU_DHtimer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // dhcontext_autocu = context;
     Pagememory = 3;
